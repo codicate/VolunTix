@@ -27,6 +27,28 @@ const Shop = () => {
 			text: 'Premier League Game',
 			points: 10,
 			date: new Date('2023-11-03'),
+			items: [
+				{
+					name: 'Match Ball',
+					image:
+						'https://cdn.theathletic.com/cdn-cgi/image/width=1200,height=900,fit=cover/app/uploads/2023/07/14081939/premier-league-ball-22-23-scaled.jpeg',
+				},
+				{
+					name: 'Signed Shirt',
+					image:
+						'https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg',
+				},
+				{
+					name: 'Signed Shirt',
+					image:
+						'https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg',
+				},
+				{
+					name: 'Match Ball',
+					image:
+						'https://cdn.theathletic.com/cdn-cgi/image/width=1200,height=900,fit=cover/app/uploads/2023/07/14081939/premier-league-ball-22-23-scaled.jpeg',
+				},
+			],
 		},
 		{
 			eventid: 2,
@@ -39,6 +61,28 @@ const Shop = () => {
 			text: 'Music Concert',
 			points: 15,
 			date: new Date('2023-11-03'),
+			items: [
+				{
+					name: 'Match Ball',
+					image:
+						'https://cdn.theathletic.com/cdn-cgi/image/width=1200,height=900,fit=cover/app/uploads/2023/07/14081939/premier-league-ball-22-23-scaled.jpeg',
+				},
+				{
+					name: 'Signed Shirt',
+					image:
+						'https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg',
+				},
+				{
+					name: 'Signed Shirt',
+					image:
+						'https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg',
+				},
+				{
+					name: 'Match Ball',
+					image:
+						'https://cdn.theathletic.com/cdn-cgi/image/width=1200,height=900,fit=cover/app/uploads/2023/07/14081939/premier-league-ball-22-23-scaled.jpeg',
+				},
+			],
 		},
 	];
 
@@ -48,15 +92,30 @@ const Shop = () => {
 				<Text style={styles.headerText}>Redeem Impact Points</Text>
 			</View>
 			<ScrollView>
-				{events.map((event, index) => (
-					<Card containerStyle={styles.card}>
-						<Card.Image source={{ uri: event.image }} style={styles.image}>
-							<Card.Title style={styles.title}>{event.title}</Card.Title>
-							<Card.FeaturedSubtitle style={styles.subtitle}>
-								{event.location}
-							</Card.FeaturedSubtitle>
-						</Card.Image>
-					</Card>
+				{events.map((event, idx) => (
+					<View>
+						<Card containerStyle={styles.card} key={idx}>
+							<Card.Image
+								source={{ uri: event.image }}
+								style={styles.card.image}
+							>
+								<Card.Title style={styles.title}>{event.title}</Card.Title>
+								<Card.FeaturedSubtitle style={styles.subtitle}>
+									{event.type} • {event.location}
+								</Card.FeaturedSubtitle>
+							</Card.Image>
+						</Card>
+						<ScrollView style={styles.subview} horizontal={true}>
+							{event.items?.map((item, index) => (
+								<Card containerStyle={styles.subcard} key={index}>
+									<Card.Image
+										source={{ uri: item.image }}
+										style={{ ...styles.subcard.image }}
+									></Card.Image>
+								</Card>
+							))}
+						</ScrollView>
+					</View>
 				))}
 			</ScrollView>
 		</View>
@@ -70,14 +129,42 @@ const styles = StyleSheet.create({
 		borderBottomWidth: 1,
 		borderBottomColor: '#ddd',
 	},
-	image: {
-		backgroundImage:
-			'linear-gradient(to bottom, transparent, rgba(0,0,0,0.5) 70%, black)',
-		borderRadius: 10,
+	view: {
+		paddingLeft: 0,
 	},
 	card: {
 		padding: 0,
+		marginLeft: '2.5%',
+		marginRight: '2.5%',
+		width: '95%',
+		height: 'auto',
 		borderRadius: 10,
+		image: {
+			backgroundImage:
+				'linear-gradient(to bottom, transparent, rgba(0,0,0,0.5) 70%, black)',
+			borderRadius: 10,
+		},
+	},
+	subview: {
+		borderRadius: 15,
+		marginLeft: '2.5%',
+		marginRight: '2.5%',
+	},
+	subcard: {
+		padding: 0,
+		marginRight: '5%',
+		marginLeft: '5%',
+		width: '1500%',
+		borderRadius: 10,
+		image: {
+			backgroundImage:
+				'linear-gradient(to bottom, transparent, rgba(0,0,0,0.5) 90%, black)',
+			borderRadius: 10,
+			height: 90,
+		},
+		title: {
+			color: 'white',
+		},
 	},
 	title: {
 		color: 'white',

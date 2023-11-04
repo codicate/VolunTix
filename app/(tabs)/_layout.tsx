@@ -27,7 +27,7 @@ export default function TabLayout() {
 			<Tabs.Screen
 				name="events"
 				options={{
-					title: 'Events',
+					title: 'Volunteer',
 					tabBarIcon: ({ color }) => (
 						<TabBarIcon name="calendar-o" color={color} />
 					),
@@ -36,7 +36,7 @@ export default function TabLayout() {
 			<Tabs.Screen
 				name="shop"
 				options={{
-					title: 'Shop',
+					title: 'Redeem',
 					tabBarIcon: ({ color }) => <TabBarIcon name="ticket" color={color} />,
 				}}
 			/>
