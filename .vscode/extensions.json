@@ -1,0 +1,7 @@
+{
+	"recommendations": [
+		"esbenp.prettier-vscode",
+		"expo.vscode-expo-tools",
+		"rne.snippets"
+	]
+}
