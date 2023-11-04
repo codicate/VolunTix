@@ -1,0 +1,18 @@
+[
+	{
+		"eventid": 0,
+		"image": "https://rochester.edu/college/wcsa/assets/images/pantry.jpg",
+		"title": "Food Drive",
+		"points": 100,
+		"location": "Queens, NY",
+		"text": "Donate food, save lives"
+	},
+	{
+		"eventid": 1,
+		"image": "https://townsquare.media/site/715/files/2023/02/attachment-WF1978256_0007.jpg",
+		"title": "Blood Drive",
+		"points": 200,
+		"location": "Central Park, NY",
+		"text": "Donate blood, save lives"
+	}
+]

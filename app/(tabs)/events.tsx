@@ -12,36 +12,17 @@ import { Card, Avatar, Icon } from "@rneui/themed";
 import React from "react";
 import { LinearGradient } from "expo-linear-gradient";
 import styles from "app/styles";
+import volunteeringData from "assets/server/events.json";
 
 const Events = () => {
 	// Dummy items
 	const router = useRouter();
+	const volunteering = volunteeringData;
 
-	const volunteering = [
-		{
-			eventid: 1,
-			image:
-				"https://preview.redd.it/b7c15eopgod61.jpg?width=1080&crop=smart&auto=webp&s=06e5e7a7480dda46de5d134bd88d07d2707a7213",
-			title: "Food Drive",
-			points: 100,
-			location: "New York, NY",
-			text: "Jia and sally need treats",
-		},
-		{
-			eventid: 2,
-			image:
-				"https://styles.redditmedia.com/t5_2sz47w/styles/profileIcon_27oknokmpl751.jpg?width=256&height=256&frame=1&auto=webp&crop=256:256,smart&s=28d7ad80a30537fd63d7e931b90279987ad98d23",
-			title: "Blood Drive",
-			points: 300,
-			location: "LA, CA",
-			text: "Jia and sally need treats",
-		},
-	];
-
-	const handleCardClick = (eventid: any) => {
+	const handleCardClick = (eventid: number) => {
 		// Handle card click
 		// router.push(`/eventspage/${eventid}`);
-		router.push(`/eventspage`);
+		router.push({ pathname: `/eventspage`, params: { eventid: eventid } });
 	};
 
 	return (
