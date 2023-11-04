@@ -111,12 +111,12 @@ const Shop = () => {
                 </Card.FeaturedSubtitle>
               </Card.Image>
             </Card>
-            <ScrollView style={styles.subview} horizontal={true}>
+            <ScrollView style={styles.carousel} horizontal={true}>
               {event.items?.map((item, index) => (
-                <Card containerStyle={styles.subcard} key={index}>
+                <Card containerStyle={styles.carousal_card} key={index}>
                   <Card.Image
                     source={{ uri: item.image }}
-                    style={{ ...styles.subcard.image }}
+                    style={{ ...styles.carousal_card.image }}
                   >
                     <LinearGradient
                       colors={["transparent", "rgba(0,0,0,0.5)", "black"]}
