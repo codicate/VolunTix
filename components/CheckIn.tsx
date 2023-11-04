@@ -35,7 +35,7 @@ export default function CheckIn({
 								<Text style={styles.info}>{user.email}</Text>
 							</View>
 							<View style={styles.qrCode}>
-								<QRCode size={400} value={qrCodeLink} />
+								<QRCode size={250} value={qrCodeLink} />
 							</View>
 							<View>
 								<Text style={styles.info}>{user.displayName}</Text>
@@ -71,7 +71,7 @@ const styles = StyleSheet.create({
 		bottom: 0,
 	},
 	titleContainer: {
-		height: '10%',
+		height: '8%',
 		backgroundColor: '#464C55',
 		borderTopRightRadius: 10,
 		borderTopLeftRadius: 10,
@@ -82,7 +82,7 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		color: '#fff',
-		fontSize: 20,
+		fontSize: 18,
 	},
 	pickerContainer: {
 		flexDirection: 'row',
@@ -93,7 +93,7 @@ const styles = StyleSheet.create({
 	},
 	content: {
 		display: 'flex',
-		height: '90%',
+		height: '92%',
 		flexDirection: 'column',
 		justifyContent: 'center',
 		alignItems: 'center',
@@ -103,14 +103,14 @@ const styles = StyleSheet.create({
 		transform: [{ rotate: '180deg' }],
 	},
 	info: {
-		color: '#ccc',
-		fontSize: 20,
+		color: '#bbb',
+		fontSize: 18,
 		textAlign: 'center',
 		marginVertical: 5,
 	},
 	qrCode: {
 		backgroundColor: '#fff',
-		padding: 40,
+		padding: 35,
 		borderRadius: 30,
 	},
 });
