@@ -132,13 +132,12 @@ const styles = StyleSheet.create({
   text: {
     color: "black",
     fontSize: 15,
-    fontFamily: "Arial",
     paddingTop: "1.5%",
     marginLeft: 10,
-    date: {
-      marginLeft: 10,
-      fontSize: 12,
-    },
+  },
+  date: {
+    marginLeft: 10,
+    fontSize: 12,
   },
 });
 
