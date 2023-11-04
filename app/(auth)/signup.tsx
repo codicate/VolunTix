@@ -19,7 +19,7 @@ export default function SignUp() {
 			firstNameRef.current + ' ' + lastNameRef.current
 		);
 		if (user) {
-			router.push('/events');
+			router.push('/onboard');
 		}
 	};
 
@@ -85,15 +85,6 @@ export default function SignUp() {
 				}}
 			>
 				Have an account? Sign In
-			</Text>
-			<Text
-				style={styles.textLink}
-				onPress={() => {
-					fakeSignIn();
-					router.push('/events');
-				}}
-			>
-				Developer fake sign in
 			</Text>
 		</View>
 	);
