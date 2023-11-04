@@ -1,0 +1,49 @@
+import { Redirect, Stack, useRouter, useLocalSearchParams } from "expo-router";
+import React from "react";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import styles from "app/stylesScreen";
+import volunteeringData from "assets/server/events.json";
+
+const EventsPage = () => {
+	const router = useRouter();
+	const { eventid } = useLocalSearchParams();
+	const handleBackButtonClick = () => {
+		router.push("/events");
+	};
+
+	const handleVolunteerButtonClick = () => {
+		console.log(eventid);
+	};
+
+	const currentVolunteering = volunteeringData[Number(eventid)];
+
+	return (
+		<View>
+			<View style={styles.header}>
+				<Text style={styles.backButton} onPress={handleBackButtonClick}>
+					Back
+				</Text>
+				<Text style={styles.headerText}>{currentVolunteering.title}</Text>
+			</View>
+			<View style={styles.container}>
+				<Image
+					source={{ uri: currentVolunteering.image }}
+					style={styles.image}
+				/>
+				<View style={styles.informationContainer}>
+					<Text style={styles.location}>{currentVolunteering.location}</Text>
+					<Text style={styles.points}>⭐{currentVolunteering.points}</Text>
+				</View>
+				<Text style={styles.description}>{currentVolunteering.text}</Text>
+				<TouchableOpacity
+					style={styles.volunteerButton}
+					onPress={handleVolunteerButtonClick}
+				>
+					<Text style={styles.buttonText}>Volunteer</Text>
+				</TouchableOpacity>
+			</View>
+		</View>
+	);
+};
+
+export default EventsPage;
