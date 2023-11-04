@@ -19,7 +19,7 @@
 		return (
 			<View style={{ flex: 1 }}>
 				<View style={styles.header}>
-					<Text style={styles.headerText}>Volunteering activities for you</Text>
+					<Text style={styles.headerText}>Volunteer opportunities near New York, NY</Text>
 				</View>
 				<ScrollView>
 					{volunteering.map((event, eventid) => (
