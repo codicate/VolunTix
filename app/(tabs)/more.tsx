@@ -69,6 +69,14 @@ const More = () => {
         </View>
       </View>
 
+      <Button onPress={showCheckIn} title="Show Check In QR Code" />
+      <Button onPress={async () => SignOut()} title="Sign Out" />
+      <CheckIn
+        isVisible={isModalVisible}
+        user={user!!}
+        onClose={onModalClose}
+      />
+
       <View style={styles.navigator}>
         <Tab.Navigator
           screenOptions={{
@@ -100,15 +108,6 @@ const More = () => {
           />
         </Tab.Navigator>
       </View>
-
-      {/* <Text style={styles.title}>Hi {user?.displayName}!</Text>
-      <Button onPress={showCheckIn} title="Show Check In QR Code" />
-      <Button onPress={async () => SignOut()} title="Sign Out" />
-      <CheckIn
-        isVisible={isModalVisible}
-        user={user!!}
-        onClose={onModalClose}
-      /> */}
     </View>
   );
 };

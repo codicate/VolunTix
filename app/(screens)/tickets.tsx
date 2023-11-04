@@ -19,7 +19,6 @@ const Tickets = () => {
       <ScrollView>
         {shop.map((event, eventid) => (
           <View key={eventid} style={{ flexDirection: "row" }}>
-            {/* <Card containerStyle={styles.pastcard}> */}
             <Image style={styles.image} source={{ uri: event.image }}></Image>
             <View style={{ flexDirection: "column" }}>
               <Text style={styles.text}>{event.title}</Text>
