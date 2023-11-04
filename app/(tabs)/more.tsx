@@ -4,7 +4,7 @@ import { appSignOut } from '#configs/store';
 import { Button } from 'react-native-elements';
 import { AuthStore } from '#configs/store';
 
-const Shop = () => {
+const More = () => {
 	const router = useRouter();
 	const SignOut = async () => {
 		await appSignOut();
@@ -14,13 +14,13 @@ const Shop = () => {
 
 	return (
 		<View style={styles.screen}>
-			<Stack.Screen options={{ headerShown: true, title: 'Settings' }} />
+			<Stack.Screen options={{ headerShown: true, title: 'More' }} />
 			<Text style={styles.title}>Hi {user?.displayName}!</Text>
 			<Button onPress={async () => SignOut()} title="Sign Out" />
 		</View>
 	);
 };
-export default Shop;
+export default More;
 
 const styles = StyleSheet.create({
 	screen: {
