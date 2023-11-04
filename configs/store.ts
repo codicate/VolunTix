@@ -80,3 +80,10 @@ export const appSignUp = async (
 		return { error: e };
 	}
 };
+
+export const fakeSignIn = async () => {
+	AuthStore.update((store) => {
+		store.isLoggedIn = true;
+		store.initialized = true;
+	});
+};

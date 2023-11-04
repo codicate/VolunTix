@@ -2,7 +2,7 @@ import { Text, View, TextInput, StyleSheet } from 'react-native';
 import { useRef } from 'react';
 import { Stack, useRouter } from 'expo-router';
 import { Button } from '@rneui/themed';
-import { appSignIn } from '#configs/store';
+import { appSignIn, fakeSignIn } from '#configs/store';
 
 export default function SignIn() {
 	const router = useRouter();
@@ -61,6 +61,15 @@ export default function SignIn() {
 				}}
 			>
 				No account? Sign Up
+			</Text>
+			<Text
+				onPress={() => {
+					fakeSignIn();
+					//@ts-ignore
+					router.replace('tabs/events');
+				}}
+			>
+				Developer fake sign in
 			</Text>
 		</View>
 	);
