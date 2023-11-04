@@ -85,8 +85,8 @@ export const styles = StyleSheet.create({
 		flex: 1,
 		justifyContent: 'center',
 		alignItems: 'center',
-		width: 300,
-		margin: 'auto',
+		width: '100%',
+		paddingHorizontal: 25,
 	},
 	textLink: {
 		color: '#2089dc',

@@ -1,17 +1,16 @@
-import { Redirect, Stack, useRouter, useLocalSearchParams } from "expo-router";
-import React from "react";
-import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
-import styles from "app/stylesScreen";
-import volunteeringData from "assets/server/events.json";
-import { StatusBar } from "expo-status-bar";
+import { Redirect, Stack, useRouter, useLocalSearchParams } from 'expo-router';
+import React from 'react';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
+import styles from 'app/stylesScreen';
+import volunteeringData from 'assets/server/events.json';
 
-import { Card, Icon } from "@rneui/themed";
+import { Card, Icon } from '@rneui/themed';
 
 const EventsPage = () => {
 	const router = useRouter();
 	const { eventid } = useLocalSearchParams();
 	const handleBackButtonClick = () => {
-		router.push("/events");
+		router.push('/events');
 	};
 
 	const handleVolunteerButtonClick = () => {
