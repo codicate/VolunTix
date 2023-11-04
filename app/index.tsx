@@ -1,5 +1,4 @@
-import { useRootNavigationState } from 'expo-router';
-import { useRouter, useSegments } from 'expo-router';
+import { useRootNavigationState, useRouter, useSegments } from 'expo-router';
 import { AuthStore } from '#configs/store';
 import React from 'react';
 import { Text, View } from 'react-native';
