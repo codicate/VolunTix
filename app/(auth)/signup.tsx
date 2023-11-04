@@ -3,6 +3,7 @@ import { useRef } from 'react';
 import { Stack, useRouter } from 'expo-router';
 import { Button, Input } from '@rneui/themed';
 import { appSignUp, fakeSignIn } from '#configs/store';
+import { styles } from './signin';
 
 export default function SignUp() {
 	const router = useRouter();
@@ -24,6 +25,7 @@ export default function SignUp() {
 
 	return (
 		<View style={styles.screen}>
+			<Text style={styles.title}>SALLY</Text>
 			<Stack.Screen options={{ title: 'Sign Up', headerLeft: () => <></> }} />
 			<Input
 				placeholder="firstName"
@@ -96,25 +98,3 @@ export default function SignUp() {
 		</View>
 	);
 }
-
-const styles = StyleSheet.create({
-	screen: {
-		flex: 1,
-		justifyContent: 'center',
-		alignItems: 'center',
-		width: 300,
-		margin: 'auto',
-	},
-	textLink: {
-		color: '#2089dc',
-	},
-	textInput: {
-		width: 250,
-		borderWidth: 1,
-		borderRadius: 4,
-		borderColor: '#2089dc',
-		paddingHorizontal: 8,
-		paddingVertical: 4,
-		marginBottom: 8,
-	},
-});

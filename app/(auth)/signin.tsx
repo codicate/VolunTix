@@ -18,6 +18,7 @@ export default function SignIn() {
 
 	return (
 		<View style={styles.screen}>
+			<Text style={styles.title}>SALLY</Text>
 			<Stack.Screen options={{ title: 'Sign In' }} />
 			<Input
 				placeholder="email"
@@ -73,7 +74,13 @@ export default function SignIn() {
 	);
 }
 
-const styles = StyleSheet.create({
+export const styles = StyleSheet.create({
+	title: {
+		fontSize: 48,
+		fontWeight: 'bold',
+		color: '#2089dc',
+		marginBottom: 24,
+	},
 	screen: {
 		flex: 1,
 		justifyContent: 'center',
