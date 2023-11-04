@@ -15,6 +15,8 @@ import styles from "app/styles";
 
 const Events = () => {
 	// Dummy items
+	const router = useRouter();
+
 	const volunteering = [
 		{
 			eventid: 1,
@@ -36,9 +38,10 @@ const Events = () => {
 		},
 	];
 
-	const handleEnroll = (item: { eventid: any }) => {
-		// Handle enroll
-		console.log(`Enrolled in: ${item.eventid}`);
+	const handleCardClick = (eventid: any) => {
+		// Handle card click
+		// router.push(`/eventspage/${eventid}`);
+		router.push(`/eventspage`);
 	};
 
 	return (
@@ -50,22 +53,30 @@ const Events = () => {
 			</View>
 			<ScrollView>
 				{volunteering.map((event, eventid) => (
-					<Card containerStyle={styles.card} key={eventid}>
-						<Card.Image source={{ uri: event.image }} style={styles.card.image}>
-							<LinearGradient
-								colors={["transparent", "rgba(0,0,0,0.5)", "black"]}
-								style={{ ...styles.gradient }}
-							></LinearGradient>
-							<View style={styles.pointsContainer}>
-								<Text style={styles.pointsText}>⭐ {event.points}</Text>
-							</View>
+					<TouchableOpacity
+						key={eventid}
+						onPress={() => handleCardClick(event.eventid)}
+					>
+						<Card containerStyle={styles.card} key={eventid}>
+							<Card.Image
+								source={{ uri: event.image }}
+								style={styles.card.image}
+							>
+								<LinearGradient
+									colors={["transparent", "rgba(0,0,0,0.5)", "black"]}
+									style={{ ...styles.gradient }}
+								></LinearGradient>
+								<View style={styles.pointsContainer}>
+									<Text style={styles.pointsText}>⭐ {event.points}</Text>
+								</View>
 
-							<Card.Title style={styles.title}>{event.title}</Card.Title>
-							<Card.FeaturedSubtitle style={styles.subtitle}>
-								{event.location}
-							</Card.FeaturedSubtitle>
-						</Card.Image>
-					</Card>
+								<Card.Title style={styles.title}>{event.title}</Card.Title>
+								<Card.FeaturedSubtitle style={styles.subtitle}>
+									{event.location}
+								</Card.FeaturedSubtitle>
+							</Card.Image>
+						</Card>
+					</TouchableOpacity>
 				))}
 			</ScrollView>
 		</View>
