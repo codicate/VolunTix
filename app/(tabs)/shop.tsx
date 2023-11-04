@@ -8,7 +8,6 @@ import {
 	ScrollView,
 	StyleSheet,
 } from 'react-native';
-import { AuthStore } from '#configs/authStore';
 
 import { Card } from '@rneui/themed';
 
@@ -93,7 +92,7 @@ const Shop = () => {
 			</View>
 			<ScrollView>
 				{events.map((event, idx) => (
-					<View>
+					<View key={idx}>
 						<Card containerStyle={styles.card} key={idx}>
 							<Card.Image
 								source={{ uri: event.image }}

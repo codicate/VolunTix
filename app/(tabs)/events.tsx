@@ -8,7 +8,6 @@ import {
 	ScrollView,
 	StyleSheet,
 } from 'react-native';
-import { AuthStore } from '#configs/store';
 import { Card, Avatar, Icon } from '@rneui/themed';
 import React from 'react';
 
@@ -49,7 +48,7 @@ const Events = () => {
 			</View>
 			<ScrollView>
 				{volunteering.map((event, eventid) => (
-					<Card containerStyle={styles.card}>
+					<Card key={eventid} containerStyle={styles.card}>
 						<Card.Image source={{ uri: event.image }} style={styles.image}>
 							<View style={styles.titleContainer}>
 								<Text style={styles.title}>{event.title}</Text>
