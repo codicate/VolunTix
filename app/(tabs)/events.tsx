@@ -10,6 +10,8 @@ import {
 } from 'react-native';
 import { Card, Avatar, Icon } from '@rneui/themed';
 import React from 'react';
+import {LinearGradient} from 'expo-linear-gradient';
+
 
 const Events = () => {
 	// Dummy items
@@ -20,7 +22,7 @@ const Events = () => {
 				'https://preview.redd.it/b7c15eopgod61.jpg?width=1080&crop=smart&auto=webp&s=06e5e7a7480dda46de5d134bd88d07d2707a7213',
 			title: 'Food Drive',
 			points: 100,
-			location: 'Rochester, NY',
+			location: 'New York, NY',
 			text: 'Jia and sally need treats',
 		},
 		{
@@ -49,7 +51,9 @@ const Events = () => {
 						<Card containerStyle={styles.card} key={eventid}>
 							<Card.Image 
 								source={{uri:event.image}}
-								style={ styles.image }>
+								style={ styles.card.image }>
+									<LinearGradient colors={['transparent', 'rgba(0,0,0,0.5)', 'black']} style={{ ...styles.gradient }}>
+									</LinearGradient>
                   <View style={styles.pointsContainer}>
 										<Icon name="star" size={16} color="#FFD700" />
 										<Text style={styles.points}>{event.points}</Text>
@@ -71,29 +75,25 @@ const Events = () => {
 			borderBottomWidth: 1,
 			borderBottomColor: '#ddd',
 		},
-		image: {
-			backgroundImage: "linear-gradient(to bottom, transparent, rgba(0,0,0,0.5) 70%, black)",
-			borderRadius: 10,
-		},
 		card: {
-      padding: 0,
+      	  padding: 0,
 		  marginLeft: '2.5%',
 		  marginRight: '2.5%',
 		  width: '95%',
 		  height: 'auto',
 		  borderRadius: 10,
 		  image: {
-			  backgroundImage: "linear-gradient(to bottom, transparent, rgba(0,0,0,0.5) 70%, black)",
+
 			  borderRadius: 10,
 		}
-	},
+		},
 		title: {
 			color: 'white',
-      paddingTop: 55,
-      paddingBottom: 0,
-      marginBottom: 5,
-      paddingLeft: 12.5,
-      textAlign: 'left'
+			paddingTop: 55,
+			paddingBottom: 0,
+			marginBottom: 5,
+			paddingLeft: 12.5,
+			textAlign: 'left'
 		},
 		subtitle: {
 			color: 'white',
@@ -101,13 +101,21 @@ const Events = () => {
 		  textAlign: 'left',
 		  paddingLeft: 12.5,
 		},
+		gradient: {
+			flex: 1,
+			justifyContent: 'flex-end',
+			padding: 16,
+			position: 'absolute', 
+			bottom: 0, 
+			height: '33%'
+		  },
 		headerText: {
 			fontSize: 18,
 			fontWeight: 'bold',
 		},
 		pointsContainer: {  
-      paddingTop: '2.5%',
-      paddingRight: '12.5%',
+			paddingTop: '2.5%',
+			paddingRight: '12.5%',
 			alignItems: 'flex-end',
 		},
 		points: {

@@ -10,6 +10,7 @@ import {
 } from 'react-native';
 
 import { Card } from '@rneui/themed';
+import {LinearGradient} from 'expo-linear-gradient';
 
 const Shop = () => {
 	const router = useRouter();
@@ -98,6 +99,8 @@ const Shop = () => {
 								source={{ uri: event.image }}
 								style={styles.card.image}
 							>
+								<LinearGradient colors={['transparent', 'rgba(0,0,0,0.5)', 'black']} style={{ ...styles.gradient }}>
+								</LinearGradient>
 								<Card.Title style={styles.title}>{event.title}</Card.Title>
 								<Card.FeaturedSubtitle style={styles.subtitle}>
 									{event.type} • {event.location}
@@ -110,7 +113,10 @@ const Shop = () => {
 									<Card.Image
 										source={{ uri: item.image }}
 										style={{ ...styles.subcard.image }}
-									></Card.Image>
+									>
+										<LinearGradient colors={['transparent', 'rgba(0,0,0,0.5)', 'black']} style={{ ...styles.gradient }}>
+										</LinearGradient>
+									</Card.Image>
 								</Card>
 							))}
 						</ScrollView>
@@ -139,8 +145,6 @@ const styles = StyleSheet.create({
 		height: 'auto',
 		borderRadius: 10,
 		image: {
-			backgroundImage:
-				'linear-gradient(to bottom, transparent, rgba(0,0,0,0.5) 70%, black)',
 			borderRadius: 10,
 		},
 	},
@@ -152,6 +156,14 @@ const styles = StyleSheet.create({
 		paddingLeft: 12.5,
 		textAlign: 'left'
 	},
+	gradient: {
+		flex: 1,
+		justifyContent: 'flex-end',
+		padding: 16,
+		position: 'absolute', 
+		bottom: 0, 
+		height: '33%'
+	  },
 	subtitle: {
 		color: 'white',
 		fontSize: 13,
@@ -165,13 +177,11 @@ const styles = StyleSheet.create({
 	},
 	subcard: {
 		padding: 0,
-		marginRight: '5%',
-		marginLeft: '5%',
-		width: '1500%',
+		// marginRight: '5%',
+		// marginLeft: '5%',
+		// width: '1500%',
 		borderRadius: 10,
 		image: {
-			backgroundImage:
-				'linear-gradient(to bottom, transparent, rgba(0,0,0,0.5) 90%, black)',
 			borderRadius: 10,
 			height: 90,
 		},
