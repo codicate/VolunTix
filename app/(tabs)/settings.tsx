@@ -1,7 +1,8 @@
-import { Redirect, Stack, useRouter } from 'expo-router';
-import { Pressable, Text, TouchableOpacity, View } from 'react-native';
+import { Stack, useRouter } from 'expo-router';
+import { Text, StyleSheet, View } from 'react-native';
 import { appSignOut } from '#configs/store';
 import { Button } from 'react-native-elements';
+import { AuthStore } from '#configs/store';
 
 const Shop = () => {
 	const router = useRouter();
@@ -9,36 +10,27 @@ const Shop = () => {
 		await appSignOut();
 		router.push('/signin');
 	};
+	const user = AuthStore.useState((s) => s.user);
 
 	return (
-		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+		<View style={styles.screen}>
 			<Stack.Screen options={{ headerShown: true, title: 'Settings' }} />
+			<Text style={styles.title}>Hi {user?.displayName}!</Text>
 			<Button onPress={async () => SignOut()} title="Sign Out" />
-			<Pressable
-				onPress={() => {
-					alert('pressed');
-				}}
-				style={({ pressed }) => [
-					{ backgroundColor: pressed ? '#920' : '#818' },
-					{
-						borderColor: '#920',
-						borderWidth: 1,
-						borderStyle: 'solid',
-						borderRadius: 8,
-						paddingHorizontal: 12,
-						paddingVertical: 6,
-					},
-				]}
-			>
-				<Text
-					style={{
-						color: 'white',
-					}}
-				>
-					Button
-				</Text>
-			</Pressable>
 		</View>
 	);
 };
 export default Shop;
+
+const styles = StyleSheet.create({
+	screen: {
+		flex: 1,
+		margin: 20,
+	},
+	title: {
+		fontSize: 28,
+		fontWeight: 'bold',
+		color: '#2089dc',
+		marginBottom: 24,
+	},
+});

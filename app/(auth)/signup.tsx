@@ -16,7 +16,7 @@ export default function SignUp() {
 		const { user } = await appSignUp(
 			emailRef.current,
 			passwordRef.current,
-			firstNameRef.current + lastNameRef.current
+			firstNameRef.current + ' ' + lastNameRef.current
 		);
 		if (user) {
 			router.push('/events');
