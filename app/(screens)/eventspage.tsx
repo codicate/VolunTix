@@ -1,7 +1,7 @@
 import { Redirect, Stack, useRouter, useLocalSearchParams } from "expo-router";
 import React from "react";
-import { View, Text, StyleSheet, Button } from "react-native";
-
+import { View, Text, StyleSheet } from "react-native";
+import styles from "app/stylesScreen";
 import volunteeringData from "assets/server/events.json";
 
 const EventsPage = () => {
@@ -15,22 +15,14 @@ const EventsPage = () => {
 	return (
 		<View>
 			<View style={styles.header}>
+				<Text style={styles.backButton} onPress={handleBackButtonClick}>
+					Back
+				</Text>
 				<Text style={styles.headerText}>{currentVolunteering.title}</Text>
 			</View>
-			<Button title="Back" onPress={handleBackButtonClick} />
 			<Text>Events Page</Text>
 		</View>
 	);
 };
 
-const styles = StyleSheet.create({
-	header: {
-		backgroundColor: "#f8f8f8",
-		padding: 10,
-	},
-	headerText: {
-		fontSize: 20,
-		textAlign: "center",
-	},
-});
 export default EventsPage;
