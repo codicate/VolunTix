@@ -40,7 +40,7 @@ export default function RootLayout() {
 
 	return (
 		<AutocompleteDropdownContextProvider>
-			<RootLayoutNav />;
+			<RootLayoutNav />
 		</AutocompleteDropdownContextProvider>
 	);
 }
