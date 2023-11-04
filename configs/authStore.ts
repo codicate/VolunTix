@@ -8,6 +8,7 @@ import {
 	signOut,
 } from 'firebase/auth';
 import { auth } from 'configs/firebase';
+import { createUser, subscribeToUser } from './userStore';
 
 interface AuthStoreType {
 	user: User | null;
@@ -23,8 +24,7 @@ export const AuthStore = new Store<AuthStoreType>({
 
 registerInDevtools({ AuthStore });
 
-const unsub = onAuthStateChanged(auth, (user) => {
-	console.log('onAuthStateChange', user);
+onAuthStateChanged(auth, (user) => {
 	AuthStore.update((store) => {
 		store.user = user;
 		store.isLoggedIn = user ? true : false;
@@ -34,11 +34,12 @@ const unsub = onAuthStateChanged(auth, (user) => {
 
 export const appSignIn = async (email: string, password: string) => {
 	try {
-		const resp = await signInWithEmailAndPassword(auth, email, password);
+		const { user } = await signInWithEmailAndPassword(auth, email, password);
 		AuthStore.update((store) => {
-			store.user = resp.user;
-			store.isLoggedIn = resp.user ? true : false;
+			store.user = user;
+			store.isLoggedIn = user ? true : false;
 		});
+		subscribeToUser(user.uid);
 		return { user: auth.currentUser };
 	} catch (e) {
 		return { error: e };
@@ -74,6 +75,8 @@ export const appSignUp = async (
 			store.user = auth.currentUser;
 			store.isLoggedIn = true;
 		});
+
+		await createUser(resp.user.uid, displayName);
 
 		return { user: auth.currentUser };
 	} catch (e) {

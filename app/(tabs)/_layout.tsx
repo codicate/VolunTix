@@ -1,6 +1,6 @@
 import Icon from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
-import { AuthStore } from '#configs/store';
+import { AuthStore } from '#configs/authStore';
 
 import Colors from '#constants/Colors';
 

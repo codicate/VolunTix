@@ -2,7 +2,7 @@ import { Text, View, StyleSheet } from 'react-native';
 import { useRef } from 'react';
 import { Stack, useRouter } from 'expo-router';
 import { Button, Input } from '@rneui/themed';
-import { appSignIn, fakeSignIn } from '#configs/store';
+import { appSignIn, fakeSignIn } from '#configs/authStore';
 
 export default function SignIn() {
 	const router = useRouter();

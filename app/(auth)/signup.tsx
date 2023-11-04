@@ -2,7 +2,7 @@ import { Text, View, TextInput, StyleSheet } from 'react-native';
 import { useRef } from 'react';
 import { Stack, useRouter } from 'expo-router';
 import { Button, Input } from '@rneui/themed';
-import { appSignUp, fakeSignIn } from '#configs/store';
+import { appSignUp, fakeSignIn } from '#configs/authStore';
 import { styles } from './signin';
 
 export default function SignUp() {
