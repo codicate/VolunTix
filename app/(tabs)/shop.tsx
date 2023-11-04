@@ -144,6 +144,20 @@ const styles = StyleSheet.create({
 			borderRadius: 10,
 		},
 	},
+	title: {
+		color: 'white',
+		paddingTop: 95,
+		paddingBottom: 0,
+		marginBottom: 5,
+		paddingLeft: 12.5,
+		textAlign: 'left'
+	},
+	subtitle: {
+		color: 'white',
+		fontSize: 13,
+		textAlign: 'left',
+		paddingLeft: 12.5,
+	},
 	subview: {
 		borderRadius: 15,
 		marginLeft: '2.5%',
@@ -164,21 +178,6 @@ const styles = StyleSheet.create({
 		title: {
 			color: 'white',
 		},
-	},
-	title: {
-		color: 'white',
-		paddingTop: 95,
-		paddingBottom: 0,
-		marginBottom: 5,
-		paddingLeft: 12.5,
-		textAlign: 'left',
-	},
-	subtitle: {
-		color: 'white',
-		fontSize: 13,
-
-		textAlign: 'left',
-		paddingLeft: 12.5,
 	},
 	headerText: {
 		fontSize: 18,
