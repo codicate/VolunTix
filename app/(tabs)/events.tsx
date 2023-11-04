@@ -1,4 +1,4 @@
-import { Redirect, Stack, useRouter } from "expo-router";
+import { Redirect, Stack, useRouter } from 'expo-router';
 import {
 	Button,
 	Pressable,
@@ -7,12 +7,12 @@ import {
 	View,
 	ScrollView,
 	StyleSheet,
-} from "react-native";
-import { Card, Avatar, Icon } from "@rneui/themed";
-import React from "react";
-import { LinearGradient } from "expo-linear-gradient";
-import styles from "app/styles";
-import volunteeringData from "assets/server/events.json";
+} from 'react-native';
+import { Card, Avatar, Icon } from '@rneui/themed';
+import React from 'react';
+import { LinearGradient } from 'expo-linear-gradient';
+import styles from 'app/styles';
+import volunteeringData from 'assets/server/events.json';
 
 const Events = () => {
 	// Dummy items
@@ -26,10 +26,10 @@ const Events = () => {
 	};
 
 	return (
-		<View style={{ flex: 1 }}>
+		<View>
 			<View style={styles.header}>
 				<Text style={styles.headerText}>
-					Volunteer opportunities near New York, NY
+					Volunteer opportunities near New York, NYc
 				</Text>
 			</View>
 			<ScrollView>
@@ -44,7 +44,7 @@ const Events = () => {
 								style={styles.card.image}
 							>
 								<LinearGradient
-									colors={["transparent", "rgba(0,0,0,0.5)", "black"]}
+									colors={['transparent', 'rgba(0,0,0,0.5)', 'black']}
 									style={{ ...styles.gradient }}
 								></LinearGradient>
 								<View style={styles.pointsContainer}>

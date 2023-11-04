@@ -23,35 +23,54 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		padding: 10,
+		minHeight: screenHeight,
+		borderRadius: 10,
+	},
+	eventCard: {
+		padding: 0,
+		marginLeft: "2.5%",
+		marginRight: "2.5%",
+		width: "95%",
+		height: "auto",
+		borderRadius: 10,
 	},
 	image: {
 		width: "100%",
-		height: 200,
+		height: 300,
 		borderRadius: 10,
 	},
-	location: {
-		fontSize: 16,
-		color: "#333",
-		marginTop: 10,
-	},
-	description: {
-		marginTop: 10,
-		fontSize: 16,
-	},
-	informationContainer: {
+	locationPointsContainer: {
+		minHeight: 50,
 		flexDirection: "row",
 		justifyContent: "space-between",
 		alignItems: "center",
+		padding: 10,
 	},
-	points: {
+	pointsContainer: {
+		minHeight: 50,
+		flexDirection: "row",
+		alignItems: "center",
+	},
+	location: {
+		fontSize: 16,
+		paddingTop: 20,
+	},
+	description: {
 		fontSize: 16,
 		color: "#333",
+		marginTop: 10,
+		marginBottom: 10,
+		padding: 10,
 	},
 	volunteerButton: {
+		minHeight: 50,
 		backgroundColor: "#007BFF",
 		padding: 10,
+		marginTop: 20,
 		borderRadius: 5,
 		alignItems: "center",
+		alignSelf: "center",
+		width: "50%",
 	},
 	buttonText: {
 		color: "#fff",

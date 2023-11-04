@@ -1,30 +1,30 @@
-import { Text, View, StyleSheet } from "react-native";
-import { useRef } from "react";
-import { Stack, useRouter } from "expo-router";
-import { Button, Input } from "@rneui/themed";
-import { appSignIn, fakeSignIn } from "#configs/authStore";
-import { LinearGradient } from "expo-linear-gradient";
+import { Text, View, StyleSheet } from 'react-native';
+import { useRef } from 'react';
+import { Stack, useRouter } from 'expo-router';
+import { Button, Input } from '@rneui/themed';
+import { appSignIn, fakeSignIn } from '#configs/authStore';
+import { LinearGradient } from 'expo-linear-gradient';
 
 export default function SignIn() {
   const router = useRouter();
-  const emailRef = useRef("");
-  const passwordRef = useRef("");
+  const emailRef = useRef('');
+  const passwordRef = useRef('');
 
   const signIn = async () => {
     const { user } = await appSignIn(emailRef.current, passwordRef.current);
     if (user) {
-      router.push("/events");
+      router.push('/events');
     }
   };
 
   return (
     <View style={styles.screen}>
       <img
-        style={{ width: "150%", position: "absolute" }}
+        style={{ width: '150%', position: 'absolute' }}
         src="https://media.tenor.com/8dTD4BUZfS8AAAAC/%CE%B2%CE%B5%CF%81%CF%84%CE%B7%CF%82-yton.gif"
       ></img>
       <Text style={styles.title}>SALLY</Text>
-      <Stack.Screen options={{ title: "Sign In" }} />
+      <Stack.Screen options={{ title: 'Sign In' }} />
       <Input
         placeholder="email"
         nativeID="email"
@@ -47,14 +47,14 @@ export default function SignIn() {
       />
       <Button
         type="outline"
-        title={"Sign In"}
+        title={'Sign In'}
         titleStyle={{
-          color: "white",
+          color: 'white',
           fontSize: 22.5,
         }}
         ViewComponent={LinearGradient} // Don't forget this!
         linearGradientProps={{
-          colors: ["#4CAF50", "#2196F3"],
+          colors: ['#4CAF50', '#2196F3'],
           start: { x: 0, y: 0.5 },
           end: { x: 1, y: 0.5 },
         }}
@@ -72,7 +72,7 @@ export default function SignIn() {
       <Text
         style={styles.textLink}
         onPress={() => {
-          router.push("/signup");
+          router.push('/signup');
         }}
       >
         No account? Sign Up
@@ -81,7 +81,7 @@ export default function SignIn() {
         style={styles.textLink}
         onPress={() => {
           fakeSignIn();
-          router.push("/events");
+          router.push('/events');
         }}
       >
         Developer fake sign in
@@ -93,20 +93,20 @@ export default function SignIn() {
 export const styles = StyleSheet.create({
   title: {
     fontSize: 48,
-    fontWeight: "bold",
-    color: "#FFFFFF",
+    fontWeight: 'bold',
+    color: '#FFFFFF',
     marginBottom: 24,
   },
   screen: {
     flex: 1,
-    justifyContent: "center",
-    alignItems: "center",
-    width: 300,
-    margin: "auto",
+    justifyContent: 'center',
+    alignItems: 'center',
+    width: '100%',
+    paddingHorizontal: 25,
   },
   textLink: {
     fontSize: 20,
-    color: "#FFFFFF",
+    color: '#FFFFFF',
   },
   textInput: {
     width: 250,
