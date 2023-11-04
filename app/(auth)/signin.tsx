@@ -65,8 +65,7 @@ export default function SignIn() {
 			<Text
 				onPress={() => {
 					fakeSignIn();
-					//@ts-ignore
-					router.replace('tabs/events');
+					router.push('/events');
 				}}
 			>
 				Developer fake sign in
