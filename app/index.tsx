@@ -7,14 +7,13 @@ import { Text, View } from 'react-native';
 const Index = () => {
 	const segments = useSegments();
 	const router = useRouter();
-	const { isLoggedIn } = AuthStore.useState((s) => s);
 	const navigationState = useRootNavigationState();
+	const { initialized, isLoggedIn } = AuthStore.useState();
 
 	React.useEffect(() => {
-		if (!navigationState?.key) return;
+		if (!navigationState?.key || !initialized) return;
 
 		const inAuthGroup = segments[0] === '(auth)';
-
 		if (
 			// If the user is not signed in and the initial segment is not anything
 			//  segment is not anything in the auth group.
@@ -22,13 +21,14 @@ const Index = () => {
 			!inAuthGroup
 		) {
 			// Redirect to the login page.
-			router.replace('/login');
+			router.replace('/signin');
+			console.log('not logged in');
 		} else if (isLoggedIn) {
 			// go to tabs root.
 			//@ts-ignore
-			router.replace('/(tabs)/events');
+			router.replace('/(tabs)/home');
 		}
-	}, [isLoggedIn, segments, navigationState?.key]);
+	}, [segments, navigationState?.key, initialized]);
 
 	return <View>{!navigationState?.key ? <Text>LOADING...</Text> : <></>}</View>;
 };

@@ -12,7 +12,7 @@ const Shop = () => {
 					AuthStore.update((s) => {
 						s.isLoggedIn = false;
 					});
-					router.replace('/login');
+					router.replace('/signin');
 				}}
 				title="LOGOUT"
 			/>
