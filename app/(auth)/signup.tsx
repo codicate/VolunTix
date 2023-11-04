@@ -18,9 +18,9 @@ export default function SignUp() {
 			firstNameRef.current + lastNameRef.current
 		);
 		console.log(user);
-		// if (user) {
-		//   router.replace('/(tabs)/home');
-		// }
+		if (user) {
+			router.push('/events');
+		}
 	};
 
 	return (

@@ -9,6 +9,14 @@ export default function SignIn() {
 	const emailRef = useRef('');
 	const passwordRef = useRef('');
 
+	const signIn = async () => {
+		const user = await appSignIn(emailRef.current, passwordRef.current);
+		console.log(user);
+		if (user) {
+			router.push('/events');
+		}
+	};
+
 	return (
 		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
 			<Stack.Screen options={{ title: 'Sign In' }} />
