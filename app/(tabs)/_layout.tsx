@@ -1,6 +1,6 @@
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import { Link, Tabs } from 'expo-router';
-import { Pressable, useColorScheme } from 'react-native';
+import { AuthStore } from '#configs/store';
 
 import Colors from '#constants/Colors';
 
@@ -15,6 +15,8 @@ function TabBarIcon(props: {
 }
 
 export default function TabLayout() {
+	const { initialized, isLoggedIn } = AuthStore.useState();
+
 	return (
 		<Tabs
 			screenOptions={{

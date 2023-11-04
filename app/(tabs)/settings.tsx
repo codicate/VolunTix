@@ -1,22 +1,19 @@
 import { Redirect, Stack, useRouter } from 'expo-router';
-import { Button, Pressable, Text, TouchableOpacity, View } from 'react-native';
-import { AuthStore } from '#configs/store';
+import { Pressable, Text, TouchableOpacity, View } from 'react-native';
+import { appSignOut } from '#configs/store';
+import { Button } from 'react-native-elements';
 
 const Shop = () => {
 	const router = useRouter();
+	const SignOut = async () => {
+		await appSignOut();
+		router.push('/signin');
+	};
+
 	return (
 		<View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
 			<Stack.Screen options={{ headerShown: true, title: 'Settings' }} />
-			<Button
-				onPress={() => {
-					AuthStore.update((s) => {
-						s.isLoggedIn = false;
-					});
-					router.replace('/signin');
-				}}
-				title="LOGOUT"
-			/>
-
+			<Button onPress={async () => SignOut()} title="Sign Out" />
 			<Pressable
 				onPress={() => {
 					alert('pressed');

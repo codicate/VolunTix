@@ -12,12 +12,11 @@ export default function SignUp() {
 	const passwordRef = useRef('');
 
 	const signUp = async () => {
-		const user = await appSignUp(
+		const { user } = await appSignUp(
 			emailRef.current,
 			passwordRef.current,
 			firstNameRef.current + lastNameRef.current
 		);
-		console.log(user);
 		if (user) {
 			router.push('/events');
 		}

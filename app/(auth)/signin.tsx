@@ -10,8 +10,7 @@ export default function SignIn() {
 	const passwordRef = useRef('');
 
 	const signIn = async () => {
-		const user = await appSignIn(emailRef.current, passwordRef.current);
-		console.log(user);
+		const { user } = await appSignIn(emailRef.current, passwordRef.current);
 		if (user) {
 			router.push('/events');
 		}
@@ -56,12 +55,7 @@ export default function SignIn() {
 					borderColor: 'white',
 					borderRadius: 30,
 				}}
-				onPress={() => {
-					const user = appSignIn(emailRef.current, passwordRef.current);
-					console.log(user);
-					//@ts-ignore
-					// router.replace('/(tabs)/home');
-				}}
+				onPress={async () => signIn()}
 			/>
 			<Text
 				onPress={() => {
