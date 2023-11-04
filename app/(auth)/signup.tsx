@@ -7,17 +7,12 @@ import { styles } from './signin';
 
 export default function SignUp() {
 	const router = useRouter();
-	const firstNameRef = useRef('');
-	const lastNameRef = useRef('');
+
 	const emailRef = useRef('');
 	const passwordRef = useRef('');
 
 	const signUp = async () => {
-		const { user } = await appSignUp(
-			emailRef.current,
-			passwordRef.current,
-			firstNameRef.current + ' ' + lastNameRef.current
-		);
+		const { user } = await appSignUp(emailRef.current, passwordRef.current);
 		if (user) {
 			router.push('/onboard');
 		}
@@ -27,24 +22,6 @@ export default function SignUp() {
 		<View style={styles.screen}>
 			<Text style={styles.title}>SALLY</Text>
 			<Stack.Screen options={{ title: 'Sign Up', headerLeft: () => <></> }} />
-			<Input
-				placeholder="firstName"
-				nativeID="firstName"
-				onChangeText={(text) => {
-					firstNameRef.current = text;
-				}}
-				style={styles.textInput}
-				inputContainerStyle={{ borderBottomWidth: 0 }}
-			/>
-			<Input
-				placeholder="lastName"
-				nativeID="lastName"
-				onChangeText={(text) => {
-					lastNameRef.current = text;
-				}}
-				style={styles.textInput}
-				inputContainerStyle={{ borderBottomWidth: 0 }}
-			/>
 			<Input
 				placeholder="email"
 				nativeID="email"

@@ -61,6 +61,7 @@ export default function CheckIn({
 
 const styles = StyleSheet.create({
 	modalContent: {
+		boxShadow: '0 -200px rgba(0,0,0,0.75)',
 		height: '90%',
 		width: '100%',
 		backgroundColor: '#25292e',

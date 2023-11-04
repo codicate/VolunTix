@@ -1,6 +1,7 @@
 import { db } from 'configs/firebase';
 import { Store, registerInDevtools } from 'pullstate';
 import { doc, setDoc, onSnapshot, getDoc } from 'firebase/firestore';
+import { User, updateProfile } from 'firebase/auth';
 
 interface UserStoreType {
 	displayName: string;
@@ -20,18 +21,22 @@ export const UserStore = new Store<UserStoreType>({
 
 registerInDevtools({ UserStore });
 
-export const createUser = async (uid: string, displayName: string) => {
+export const createUser = async (user: User, displayName: string) => {
 	try {
-		const userDoc = doc(db, 'users', uid);
+		const userDoc = doc(db, 'users', user.uid);
+		updateProfile(user, {
+			displayName: displayName,
+		});
+
 		const docRef = await setDoc(userDoc, {
-			uid: uid,
+			uid: user.uid,
 			displayName: displayName,
 			registeredEvent: {
 				checkedIn: false,
 			},
 		});
 
-		subscribeToUser(uid);
+		subscribeToUser(user.uid);
 		return { docRef: docRef };
 	} catch (e) {
 		return { error: e };
