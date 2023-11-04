@@ -102,7 +102,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
-    paddingHorizontal: 25,
+    paddingHorizontal: 35,
   },
   textLink: {
     fontSize: 20,
