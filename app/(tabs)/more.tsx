@@ -66,7 +66,7 @@ const More = () => {
 						marginRight: "auto",
 					}}
 				>
-					Hi {user?.displayName}!
+					{user?.displayName}
 				</Text>
 				<Icon name="sign-out" size={20} onPress={SignOut} />
 				<Icon name="bars" size={20} />
