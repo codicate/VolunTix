@@ -11,7 +11,7 @@ const Tickets = () => {
 			style={{
 				backgroundColor: "white",
 				paddingTop: "5%",
-				paddingBottom: "100%",
+				flex: 1,
 			}}
 		>
 			<ScrollView

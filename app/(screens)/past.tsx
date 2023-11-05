@@ -12,7 +12,7 @@ const Past = () => {
 			style={{
 				backgroundColor: "white",
 				paddingTop: "5%",
-				paddingBottom: "100%",
+				flex: 1,
 			}}
 		>
 			<ScrollView
@@ -48,6 +48,7 @@ export const PastCard = ({
 			flexDirection: "row",
 			paddingRight: 10,
 			alignItems: "center",
+			flex: 1,
 		}}
 	>
 		{/* <Card containerStyle={styles.pastcard}> */}

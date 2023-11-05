@@ -118,6 +118,7 @@ const styles = StyleSheet.create({
 	},
 	navigator: {
 		display: "flex",
+		flex: 1,
 		paddingTop: 10,
 	},
 	icon: {},
