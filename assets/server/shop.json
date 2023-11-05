@@ -5,6 +5,8 @@
 		"avatar": "avatar1.jpg",
 		"title": "Arsenal vs Chelsea",
 		"image": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/09/12/16629868110245.jpg",
+		"type": "Sports",
+		"name": "Arsenal vs Chelsea",
 		"type": "Sports Event",
 		"name": "Game Ticket",
 		"location": "Emirates Stadium",
