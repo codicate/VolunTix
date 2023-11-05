@@ -19,7 +19,7 @@ const EventsPage = () => {
 
 	const handleVolunteerButtonClick = () => {
 		if (user) {
-			registerForEvent(user, eventid as string);
+			registerForEvent(user, volunteeringData[Number(eventid)]);
 			setRegistered(true);
 		}
 	};

@@ -17,7 +17,6 @@ export default function CheckIn({
 	const registeredEvent = UserStore.useState((s) => s.registeredEvent);
 	if (!user) return null;
 	const qrCodeLink = "https://codicate.github.io/jia?userId=" + user.uid;
-
 	return (
 		<Modal animationType="slide" transparent={true} visible={isVisible}>
 			<View style={styles.modalContent}>
