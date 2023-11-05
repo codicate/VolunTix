@@ -1,4 +1,4 @@
-import { Text, View, StyleSheet } from 'react-native';
+import { Text, View, StyleSheet, Image } from 'react-native';
 import { useRef } from 'react';
 import { Stack, useRouter } from 'expo-router';
 import { Button, Input } from '@rneui/themed';
@@ -19,10 +19,12 @@ export default function SignIn() {
 
   return (
     <View style={styles.screen}>
-      <img
-        style={{ width: '150%', position: 'absolute' }}
-        src="https://media.tenor.com/8dTD4BUZfS8AAAAC/%CE%B2%CE%B5%CF%81%CF%84%CE%B7%CF%82-yton.gif"
-      ></img>
+      <Image
+        style={{ width: '135%', height: '100%', position: 'absolute' }}
+        source={{
+          uri: 'https://media.tenor.com/8dTD4BUZfS8AAAAC/%CE%B2%CE%B5%CF%81%CF%84%CE%B7%CF%82-yton.gif',
+        }}
+      />
       <Text style={styles.title}>SALLY</Text>
       <Stack.Screen options={{ title: 'Sign In' }} />
       <Input
@@ -65,6 +67,7 @@ export default function SignIn() {
         }}
         buttonStyle={{
           borderWidth: 0,
+          borderColor: 'white',
           borderRadius: 12.5,
         }}
         onPress={async () => signIn()}
@@ -102,6 +105,7 @@ export const styles = StyleSheet.create({
     justifyContent: 'center',
     alignItems: 'center',
     width: '100%',
+    height: '100%',
     paddingHorizontal: 35,
   },
   textLink: {
@@ -110,8 +114,9 @@ export const styles = StyleSheet.create({
   },
   textInput: {
     width: 250,
-    borderWidth: 1,
+    borderWidth: 0,
     borderRadius: 12.5,
+    color: 'white',
     paddingHorizontal: 8,
     paddingVertical: 4,
     marginBottom: 8,
