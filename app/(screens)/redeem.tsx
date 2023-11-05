@@ -5,7 +5,7 @@ import React from "react";
 import { Button } from "@rneui/themed";
 
 const redeem = () => {
-	const { eventId, itemId, itemName, itemPoints } = useLocalSearchParams();
+	const { eventid, itemid, itemName, itemPoints } = useLocalSearchParams();
 	const router = useRouter();
 	return (
 		<View style={styles.container}>
