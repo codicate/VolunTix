@@ -12,7 +12,8 @@ import volunteeringData from "assets/server/events.json";
 import { createMaterialTopTabNavigator } from "@react-navigation/material-top-tabs";
 
 import { Avatar } from "@rneui/themed";
-import Past, { PastCard } from "#app/(screens)/past";
+import Past from "#app/(screens)/past";
+import { EventCard } from "#app/(tabs)/events";
 import Tickets from "#app/(screens)/tickets";
 import { UserStore } from "#configs/userStore";
 
@@ -74,23 +75,20 @@ const More = () => {
 						paddingTop: 10,
 						display: "flex",
 						alignItems: "stretch",
-						gap: 10,
 						backgroundColor: "#eee",
 					}}
 				>
 					<Text
 						style={{
-							fontSize: 18,
+							fontSize: 16,
 							textAlign: "center",
 						}}
 					>
 						Registered Event
 					</Text>
-					<PastCard event={volunteeringData[registeredEvent.id]} />
-					<Button
-						onPress={showCheckIn}
-						title="Show Check In QR Code"
-						style={{ width: 300 }}
+					<EventCard
+						event={volunteeringData[registeredEvent.id]}
+						onClick={showCheckIn}
 					/>
 				</View>
 			)}
