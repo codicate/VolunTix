@@ -7,6 +7,7 @@ interface UserStoreType {
 	displayName: string;
 	uid: string;
 	registeredEvent: {
+		id: string;
 		checkedIn: boolean;
 	};
 }
@@ -15,6 +16,7 @@ export const UserStore = new Store<UserStoreType>({
 	displayName: '',
 	uid: '',
 	registeredEvent: {
+		id: '',
 		checkedIn: false,
 	},
 });
@@ -31,9 +33,7 @@ export const createUser = async (user: User, displayName: string) => {
 		const docRef = await setDoc(userDoc, {
 			uid: user.uid,
 			displayName: displayName,
-			registeredEvent: {
-				checkedIn: false,
-			},
+			registeredEvent: null,
 		});
 
 		subscribeToUser(user.uid);
@@ -48,12 +48,25 @@ export const subscribeToUser = async (uid: string) => {
 	const userDoc = doc(db, 'users', uid);
 	const data = (await getDoc(userDoc)).data() as UserStoreType;
 	UserStore.update((store) => {
-		store.registeredEvent.checkedIn = data.registeredEvent.checkedIn;
+		store = data;
 	});
 
 	onSnapshot(userDoc, (doc) => {
 		UserStore.update((store) => {
-			store.registeredEvent.checkedIn = doc.data()?.registeredEvent.checkedIn;
+			store = doc.data() as UserStoreType;
 		});
+	});
+};
+
+export const registerForEvent = (user: User, id: string) => {
+	UserStore.update((store) => {
+		store.registeredEvent.id = id;
+	});
+	const userDoc = doc(db, 'users', user.uid);
+	setDoc(userDoc, {
+		registeredEvent: {
+			id: id,
+			checkedIn: false,
+		},
 	});
 };
