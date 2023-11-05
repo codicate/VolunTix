@@ -11,7 +11,7 @@ import {
 } from "react-native";
 import eventsData from "assets/server/shop.json";
 import Icon from "react-native-vector-icons/Feather";
-import { Card } from "@rneui/themed";
+import { Card, Divider } from "@rneui/themed";
 import { LinearGradient } from "expo-linear-gradient";
 import styles from "app/styles";
 
@@ -180,6 +180,12 @@ const Shop = () => {
 								</TouchableOpacity>
 							))}
 						</ScrollView>
+						{idx !== events.length - 1 && (
+							<Divider
+								width={2}
+								style={{ marginTop: 15, marginBottom: 5, marginHorizontal: 20 }}
+							/>
+						)}
 					</View>
 				))}
 			</ScrollView>
