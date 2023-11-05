@@ -154,13 +154,14 @@ const Shop = () => {
 									style={styles.card.image}
 								>
 									<LinearGradient
-										colors={["transparent", "rgba(0,0,0,0.5)", "black"]}
-										style={{ ...styles.gradient }}
-									></LinearGradient>
-									<Card.Title style={styles.title}>{event.title}</Card.Title>
-									<Card.FeaturedSubtitle style={styles.subtitle}>
-										{event.type} • {event.location}
-									</Card.FeaturedSubtitle>
+										colors={["transparent", "rgba(0, 0, 0, 0.85)"]}
+										style={{ flex: 1, justifyContent: "center" }}
+									>
+										<Card.Title style={styles.title}>{event.title}</Card.Title>
+										<Card.FeaturedSubtitle style={styles.subtitle}>
+											{event.location} • 5 miles
+										</Card.FeaturedSubtitle>
+									</LinearGradient>
 								</Card.Image>
 							</Card>
 						</TouchableOpacity>
@@ -174,12 +175,7 @@ const Shop = () => {
 										<Card.Image
 											source={{ uri: item.image }}
 											style={{ ...styles.carousal_card.image }}
-										>
-											<LinearGradient
-												colors={["transparent", "rgba(0,0,0,0.5)", "black"]}
-												style={{ ...styles.gradient }}
-											></LinearGradient>
-										</Card.Image>
+										/>
 									</Card>
 								</TouchableOpacity>
 							))}
