@@ -27,7 +27,7 @@ const Events = () => {
 	};
 
 	return (
-		<View style={{ flexDirection: "column", gap: 10 }}>
+		<View style={{ flexDirection: "column", gap: 10, flex: 1 }}>
 			<View
 				style={{
 					flexDirection: "row",
@@ -170,7 +170,7 @@ export const EventCard = ({
 				>
 					<Card.Title style={styles.title}>{event.title}</Card.Title>
 					<Card.FeaturedSubtitle style={styles.subtitle}>
-						{event.location} • 5 miles
+						{event.location} • {event.distance}
 					</Card.FeaturedSubtitle>
 				</LinearGradient>
 			</Card.Image>
