@@ -47,11 +47,15 @@ export const PastCard = ({
 		style={{
 			flexDirection: "row",
 			paddingRight: 10,
+			alignItems: "center",
 		}}
 	>
 		{/* <Card containerStyle={styles.pastcard}> */}
 		<View style={{ flexDirection: "row", alignItems: "center" }}>
-			<Image style={styles.image} source={{ uri: event.image }}></Image>
+			<Image
+				style={{ ...styles.image, marginLeft: 10 }}
+				source={{ uri: event.image }}
+			></Image>
 			<View style={{ flexDirection: "column" }}>
 				<Text style={styles.text}>{event.title}</Text>
 				<Text style={styles.date}>{event.date}</Text>
@@ -61,12 +65,12 @@ export const PastCard = ({
 			style={{
 				flexDirection: "column",
 				marginLeft: "auto",
-				marginRight: "auto",
+				marginRight: 10,
 			}}
 		>
 			<Text
 				style={{
-					fontSize: 20,
+					fontSize: 16,
 					fontFamily: "Arial",
 					marginLeft: "auto",
 					marginRight: "auto",
@@ -74,7 +78,7 @@ export const PastCard = ({
 			>
 				{event.points}
 			</Text>
-			<Text style={{ fontSize: 20, marginLeft: "auto", marginRight: "auto" }}>
+			<Text style={{ fontSize: 16, marginLeft: "auto", marginRight: "auto" }}>
 				Points
 			</Text>
 		</View>
