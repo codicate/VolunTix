@@ -96,7 +96,7 @@ const More = () => {
 					</View>
 				</View>
 			</View>
-			{registeredEvent && (
+			{registeredEvent && !registeredEvent.checkedIn && (
 				<EventCard
 					event={volunteeringData[registeredEvent.id]}
 					daysLeft={5}
