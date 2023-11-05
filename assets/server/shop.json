@@ -3,43 +3,43 @@
 		"eventid": 0,
 		"itemid": 0,
 		"avatar": "avatar1.jpg",
-		"title": "Arsenal vs Chelsea",
-		"image": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/09/12/16629868110245.jpg",
+		"title": "Yankees vs. Mets",
+		"image": "https://example.com/baseball-game-image.jpg",
 		"type": "Sports Event",
 		"name": "Game Ticket",
-		"location": "Emirates Stadium",
-		"text": "Premier League Game",
+		"location": "Yankee Stadium",
+		"text": "MLB Baseball Game",
 		"points": 100,
-		"description": "Watch the most anticipated soccer of the season, live at the Emirates Stadium. The game will be between Arsenal and Chelsea. Live the experience of watching the best players in the world live with your impact points.",
+		"description": "Watch the exciting rivalry between the New York Yankees and the New York Mets at Yankee Stadium. Experience the thrill of a live Major League Baseball game with your impact points.",
 		"date": "November 3, 2023",
 		"items": [
 			{
 				"itemid": 1,
-				"name": "Match Ball",
-				"image": "https://cdn.theathletic.com/cdn-cgi/image/width=1200,height=900,fit=cover/app/uploads/2023/07/14081939/premier-league-ball-22-23-scaled.jpeg",
+				"name": "Baseball Souvenir",
+				"image": "https://example.com/baseball-souvenir-image.jpg",
 				"points": 10,
-				"description": "Real match ball used in the game between Arsenal and Chelsea. Signed by the players. Get it now!"
+				"description": "Get a souvenir baseball from the game to remember this exciting match."
 			},
 			{
 				"itemid": 2,
-				"name": "Signed Shirt",
-				"image": "https://x1.adis.ws/v1/media/graphics/i/ArsenalDirect/MHR6929_pl?patches=patches_MHR6929-pl&name=SAKA&numbers=pl-home__2023-24--7",
+				"name": "Signed Jersey",
+				"image": "https://example.com/signed-jersey-image.jpg",
 				"points": 20,
-				"description": "Signed by the Bukayo Saka the famous Arsenal soccer player. Bukayo Ayoyinka Temidayo Saka is an English professional footballer who plays as a right winger for Premier League club Arsenal and the England national team. He is considered to be one of the best young wingers in the world."
+				"description": "Own a piece of baseball history with a signed jersey from one of the star players in the game."
 			},
 			{
 				"itemid": 3,
-				"name": "Signed Poster",
-				"image": "https://cdn.shopify.com/s/files/1/0113/6171/4238/products/Arsenal_Pierre-Emerick_Aubameyang_signed_12x8_5e74926a-fcdd-4c76-adde-66e31f29fc0b_540x.png?v=1687431437",
+				"name": "Stadium Poster",
+				"image": "https://example.com/stadium-poster-image.jpg",
 				"points": 10,
-				"description": "Poster of the Arsenal soccer player Pierre-Emerick Aubameyang. Pierre-Emerick Emiliano François Aubameyang is a professional footballer who plays as a forward and is the captain of both Premier League club Arsenal and the Gabon national team. He is considered to be one of the best strikers in the world."
+				"description": "Take home a poster of Yankee Stadium as a memento of your visit."
 			},
 			{
 				"itemid": 4,
-				"name": "Signed Shirt",
-				"image": "https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg",
-				"points": 10,
-				"description": "Signed by the Thierry Henry. He is a French professional football coach, pundit, sports broadcaster and former player. He is currently the manager of the France national under-21 team. He is considered one of the greatest strikers of all time, and one of the greatest players in Premier League history."
+				"name": "VIP Experience",
+				"image": "https://example.com/vip-experience-image.jpg",
+				"points": 30,
+				"description": "Upgrade your game ticket to a VIP experience with premium seating and access to exclusive areas."
 			}
 		]
 	},
@@ -67,7 +67,7 @@
 			{
 				"itemid": 2,
 				"name": "Signed Guitar",
-				"image": "https://cdn.shoplightspeed.com/shops/633679/files/54799825/800x1024x2/the-rolling-stones-ready-steady-go-mick-jagger-196.jpg",
+				"image": "https://d2skn5554g4boz.cloudfront.net/content/images/552/larger/3390977_1.jpg",
 				"points": 40,
 				"description": "Guitar played by the legendary Keith Richards. Keith Richards is an English musician, singer, and songwriter. He is best known as the co-founder, guitarist, secondary vocalist, and co-principal songwriter of the Rolling Stones."
 			},
@@ -95,7 +95,7 @@
 		"image": "https://arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/R66IEXIXSVHL5NRATWDRPFR3U4.jpg",
 		"type": "Concert",
 		"name": "Concert Ticket",
-		"location": "Venue Name",
+		"location": "Madison Square Garden",
 		"text": "Music Concert",
 		"points": 120,
 		"description": "Get ready to witness Taylor Swift's Reputation Tour live in concert. Experience the enchanting performance by Taylor Swift and her band with your impact points.",
@@ -125,7 +125,7 @@
 			{
 				"itemid": 4,
 				"name": "Signed CD",
-				"image": "https://ucarecdn.com/f49cb6c9-bf48-4853-9ad4-30c6d7f48bb0/-/format/auto/-/preview/3000x3000/-/quality/lighter/Box%20Set.png",
+				"image": "https://images.pristineauction.com/140/1408885/main_1579643023-Taylor-Swift-Signed-Reputation-CD-Album-JSA-Hologram-PristineAuction.com.jpg",
 				"points": 15,
 				"description": "A CD of Taylor Swift's latest album, personally signed by her."
 			}
@@ -135,29 +135,29 @@
 		"eventid": 3,
 		"itemid": 0,
 		"avatar": "football_game_avatar.jpg",
-		"title": "Buffalo Bills vs. Kansas City Chiefs",
-		"image": "https://static.www.nfl.com/image/private/t_editorial_landscape_12_desktop/league/ktgeaont6jrsonm1aebq",
+		"title": "Jets vs. Texans",
+		"image": "https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/jets/uzmo5mm1z35csq4qvqn9",
 		"type": "Sports Event",
 		"name": "Game Ticket",
-		"location": "Arrowhead Stadium",
+		"location": "MetLife Stadium",
 		"text": "NFL Game",
 		"points": 80,
-		"description": "Don't miss the excitement of the Buffalo Bills vs. Kansas City Chiefs NFL game at Arrowhead Stadium. Watch two top NFL teams battle it out for victory with your impact points.",
+		"description": "Don't miss the excitement of the Jets vs. Texans NFL game at MetLife. Watch two top NFL teams battle it out for victory with your impact points.",
 		"date": "November 16, 2023",
 		"items": [
 			{
 				"itemid": 1,
 				"name": "VIP Tailgate Pass",
-				"image": "https://i0.wp.com/www.gamedayhospitality.com/wp-content/uploads/2022/10/Buffalo-Red-Zone-Temp-Logo.png?fit=1020%2C1220&quality=80&ssl=1",
+				"image": "https://www.tailgaterconcierge.com/wp-content/uploads/2021/09/https___empirewritesback.com_files_2016_04_nfl-oakland-raiders-new-york-jets-850x560-1.jpg",
 				"points": 25,
 				"description": "Access to the VIP tailgate party before the game with food, drinks, and entertainment."
 			},
 			{
 				"itemid": 2,
 				"name": "Team Jersey",
-				"image": "https://shop.buffalobills.com/cdn/shop/products/BILLMZ0001A_ALLEN.jpg?v=1627477174",
+				"image": "https://fanatics.frgimages.com/new-york-jets/mens-nike-duane-brown-gotham-green-new-york-jets-team-game-jersey_ss5_p-200637846+pv-1+u-py1cpjtjq7wtigivvgm2+v-svhoklywlgdui6rcvlhz.jpg?_hv=2&w=900",
 				"points": 15,
-				"description": "Official team jersey of either the Buffalo Bills or the Kansas City Chiefs, your choice."
+				"description": "Official team jersey of either the Jets or Texans, your choice."
 			},
 			{
 				"itemid": 3,
