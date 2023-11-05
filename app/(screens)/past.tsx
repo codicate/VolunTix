@@ -6,32 +6,55 @@ import { LinearGradient } from "expo-linear-gradient";
 import styles from "#app/styles";
 
 const Past = () => {
-  const volunteering = volunteeringData;
+	const volunteering = volunteeringData;
 
-  return (
-    <View
-      style={{
-        backgroundColor: "white",
-        paddingTop: "5%",
-        paddingBottom: "100%",
-      }}
-    >
-      <ScrollView>
-        {volunteering.map((event, eventid) => (
-          <View key={eventid} style={{ flexDirection: "row" }}>
-            {/* <Card containerStyle={styles.pastcard}> */}
-            <Image style={styles.image} source={{ uri: event.image }}></Image>
-            <View style={{ flexDirection: "column" }}>
-              <Text style={styles.text}>{event.title}</Text>
-              <Text style={styles.text}>{event.location}</Text>
-              <Text style={styles.date}>16 July</Text>
-            </View>
-            <Text style={{ paddingLeft: "30%", fontSize: 25 }}>⭐ 90</Text>
-          </View>
-        ))}
-      </ScrollView>
-    </View>
-  );
+	return (
+		<View
+			style={{
+				backgroundColor: "white",
+				paddingTop: "5%",
+				paddingBottom: "100%",
+			}}
+		>
+			<ScrollView
+				contentContainerStyle={{
+					display: "flex",
+					gap: 20,
+				}}
+			>
+				{volunteering.map((event, eventid) => (
+					<PastCard key={eventid} event={event} />
+				))}
+			</ScrollView>
+		</View>
+	);
 };
+
+export const PastCard = ({
+	event,
+}: {
+	event: {
+		image: string;
+		title: string;
+		location: string;
+	};
+}) => (
+	<View
+		style={{
+			flexDirection: "row",
+			justifyContent: "space-between",
+			paddingRight: 10,
+		}}
+	>
+		{/* <Card containerStyle={styles.pastcard}> */}
+		<Image style={styles.image} source={{ uri: event.image }}></Image>
+		<View style={{ flexDirection: "column" }}>
+			<Text style={styles.text}>{event.title}</Text>
+			<Text style={styles.text}>{event.location}</Text>
+			<Text style={styles.date}>16 July</Text>
+		</View>
+		<Text style={{ paddingLeft: "30%", fontSize: 25 }}>⭐ 90</Text>
+	</View>
+);
 
 export default Past;
