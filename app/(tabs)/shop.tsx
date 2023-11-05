@@ -10,7 +10,7 @@ import {
 	Dimensions,
 } from "react-native";
 import eventsData from "assets/server/shop.json";
-
+import Icon from "react-native-vector-icons/Feather";
 import { Card } from "@rneui/themed";
 import { LinearGradient } from "expo-linear-gradient";
 import styles from "app/styles";
@@ -30,9 +30,119 @@ const Shop = () => {
 	};
 
 	return (
-		<View style={{ flex: 1 }}>
-			<View style={styles.header}>
-				<Text style={styles.headerText}>Redeem Impact Points</Text>
+		<View style={{ flexDirection: "column", gap: 10, flex: 1 }}>
+			<View
+				style={{
+					flexDirection: "row",
+					alignItems: "center",
+					justifyContent: "space-between",
+					marginTop: "5%",
+				}}
+			>
+				<View
+					style={{
+						flexDirection: "column",
+						marginLeft: "4%",
+					}}
+				>
+					<Text style={{ color: "gray" }}>Showing events near</Text>
+					<View style={{ flexDirection: "row", alignItems: "center" }}>
+						<Text>New York City, NY</Text>
+						<Icon size={20} name="chevron-down" color="black" />
+					</View>
+				</View>
+				<Icon
+					size={25}
+					name="filter"
+					color="black"
+					style={{ marginRight: "6%" }}
+				/>
+			</View>
+			<Card
+				containerStyle={{
+					backgroundColor: "rgba(128, 128, 128, 0.1)",
+					borderColor: "rgba(128, 128, 128, 0.1)",
+					borderRadius: 12.5,
+				}}
+			>
+				<View style={{ flexDirection: "row", alignItems: "center" }}>
+					<Icon
+						size={15}
+						name="search"
+						color="black"
+						style={{ marginRight: "6%" }}
+					/>
+					<Text>Search for Events</Text>
+					<View
+						style={{
+							flex: 1,
+							justifyContent: "flex-end",
+							flexDirection: "row",
+						}}
+					>
+						<Icon size={15} name="mic" color="black" />
+					</View>
+				</View>
+			</Card>
+			<View
+				style={{
+					flexDirection: "row",
+					gap: 1,
+				}}
+			>
+				<Card
+					containerStyle={{
+						backgroundColor: "rgba(128, 128, 128, 0.3)",
+						borderColor: "rgba(128, 128, 128, 0.3)",
+						borderRadius: 12.5,
+						width: "40%",
+					}}
+				>
+					<View
+						style={{
+							flexDirection: "row",
+							gap: 5,
+							alignItems: "center",
+							justifyContent: "center",
+						}}
+					>
+						<Text>Point Cost</Text>
+						<Icon size={15} name="chevron-down" color="black" />
+					</View>
+				</Card>
+
+				<Card
+					containerStyle={{
+						backgroundColor: "rgba(128, 128, 128, 0.3)",
+						borderColor: "rgba(128, 128, 128, 0.3)",
+						borderRadius: 12.5,
+						width: "25%",
+					}}
+				>
+					<View
+						style={{
+							flexDirection: "row",
+							gap: 5,
+							alignItems: "center",
+							justifyContent: "center",
+						}}
+					>
+						<Text>Type</Text>
+						<Icon size={15} name="chevron-down" color="black" />
+					</View>
+				</Card>
+			</View>
+			<View>
+				<Text
+					style={{
+						marginTop: "2%",
+						marginLeft: "4%",
+						fontWeight: "bold",
+						fontSize: 20,
+					}}
+				>
+					Events Nearby
+				</Text>
 			</View>
 			<ScrollView>
 				{events.map((event, idx) => (

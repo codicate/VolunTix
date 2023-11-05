@@ -27,18 +27,17 @@ const EventsPage = () => {
 	const currentVolunteering = volunteeringData[Number(eventid)];
 
 	return (
-		<View>
-			<View style={styles.header}>
-				<Text style={styles.backButton} onPress={handleBackButtonClick}>
-					Back
-				</Text>
-				<Text style={styles.headerText}>{currentVolunteering.title}</Text>
-			</View>
+		<View style={{ backgroundColor: "white" }}>
 			<View style={styles.container}>
-				<Card containerStyle={styles.eventCard}>
+				<Image
+					source={{
+						uri: "https://media.tenor.com/8dTD4BUZfS8AAAAC/%CE%B2%CE%B5%CF%81%CF%84%CE%B7%CF%82-yton.gif",
+					}}
+				></Image>
+				<Card>
 					<Card.Image
 						source={{ uri: currentVolunteering.image }}
-						style={styles.image}
+						style={{ ...styles.image, resizeMode: "cover" }}
 					/>
 					<View style={styles.locationPointsContainer}>
 						<Card.Title style={styles.location}>
