@@ -16,6 +16,9 @@ interface UserStoreType {
 		checkedIn: boolean;
 		points: number;
 	};
+	completedEvents: {
+		id: number;
+	}[];
 }
 
 export const UserStore = new Store<UserStoreType>({
@@ -23,6 +26,7 @@ export const UserStore = new Store<UserStoreType>({
 	uid: "",
 	points: 0,
 	redeemedItems: [],
+	completedEvents: [],
 });
 
 registerInDevtools({ UserStore });
@@ -40,6 +44,7 @@ export const createUser = async (user: User, displayName: string) => {
 			points: 0,
 			registeredEvent: null,
 			redeemedItems: [],
+			completedEvents: [],
 		});
 
 		subscribeToUser(user.uid);
@@ -56,6 +61,7 @@ const updateUser = (data: UserStoreType) => {
 		store.points = data.points;
 		store.registeredEvent = data.registeredEvent;
 		store.redeemedItems = data.redeemedItems;
+		store.completedEvents = data.completedEvents;
 	});
 };
 

@@ -1,12 +1,11 @@
 import volunteeringData from "assets/server/events.json";
 import { View, Image, ScrollView, Text } from "react-native";
-
-import { ListItem, Avatar, Card } from "@rneui/themed";
-import { LinearGradient } from "expo-linear-gradient";
 import styles from "#app/styles";
+import { UserStore } from "#configs/userStore";
 
 const Past = () => {
 	const volunteering = volunteeringData;
+	const completedEvents = UserStore.useState((s) => s.completedEvents);
 
 	return (
 		<View
@@ -22,9 +21,12 @@ const Past = () => {
 					gap: 20,
 				}}
 			>
-				{volunteering.map((event, eventid) => (
-					<PastCard key={eventid} event={event} />
-				))}
+				{volunteering.map(
+					(event, eventid) =>
+						completedEvents.find(
+							(completedEvent) => completedEvent.id === eventid
+						) && <PastCard key={eventid} event={event} />
+				)}
 			</ScrollView>
 		</View>
 	);
