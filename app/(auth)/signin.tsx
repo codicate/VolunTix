@@ -113,6 +113,7 @@ export const styles = StyleSheet.create({
     color: '#FFFFFF',
   },
   textInput: {
+    minWidth: 250,
     width: 250,
     borderWidth: 0,
     borderRadius: 12.5,
