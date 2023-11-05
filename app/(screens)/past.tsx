@@ -24,7 +24,7 @@ const Past = () => {
             <View style={{ flexDirection: "column" }}>
               <Text style={styles.text}>{event.title}</Text>
               <Text style={styles.text}>{event.location}</Text>
-              <Text style={styles.text.date}>16 July</Text>
+              <Text style={styles.date}>16 July</Text>
             </View>
             <Text style={{ paddingLeft: "30%", fontSize: 25 }}>⭐ 90</Text>
           </View>
