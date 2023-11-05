@@ -80,6 +80,7 @@ export default function SignUp() {
 			>
 				Have an account? Sign In
 			</Text>
+			<Text style={styles.textLink}>Non Profit? Click here</Text>
 		</View>
 	);
 }
