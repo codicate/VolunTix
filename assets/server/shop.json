@@ -4,7 +4,7 @@
 		"itemid": 0,
 		"avatar": "avatar1.jpg",
 		"title": "Yankees vs. Mets",
-		"image": "https://example.com/baseball-game-image.jpg",
+		"image": "https://s.secure.espncdn.com/stitcher/artwork/16x9.jpg?height=720&width=1280&cb=12&templateId=espn.core.dtc.large.16x9.1&source=https://artwork.espncdn.com/events/401355679/16x9/1280x720_20220621172623.jpg&showBadge=true&package=ESPN_PLUS_MLB",
 		"type": "Sports Event",
 		"name": "Game Ticket",
 		"location": "Yankee Stadium",
@@ -16,28 +16,28 @@
 			{
 				"itemid": 1,
 				"name": "Baseball Souvenir",
-				"image": "https://example.com/baseball-souvenir-image.jpg",
+				"image": "https://shoplegends.com/cdn/shop/products/Mike-Trout.jpg?v=1658320909",
 				"points": 10,
 				"description": "Get a souvenir baseball from the game to remember this exciting match."
 			},
 			{
 				"itemid": 2,
 				"name": "Signed Jersey",
-				"image": "https://example.com/signed-jersey-image.jpg",
+				"image": "https://m.media-amazon.com/images/I/714VoD3N68L.jpg",
 				"points": 20,
 				"description": "Own a piece of baseball history with a signed jersey from one of the star players in the game."
 			},
 			{
 				"itemid": 3,
 				"name": "Stadium Poster",
-				"image": "https://example.com/stadium-poster-image.jpg",
+				"image": "https://render.fineartamerica.com/images/rendered/default/poster/8/5/break/images/artworkimages/medium/3/prior-to-the-game-yankee-stadium-matt-hecht.jpg",
 				"points": 10,
 				"description": "Take home a poster of Yankee Stadium as a memento of your visit."
 			},
 			{
 				"itemid": 4,
 				"name": "VIP Experience",
-				"image": "https://example.com/vip-experience-image.jpg",
+				"image": "https://www.evertaut.co.uk/wp-content/uploads/2018/12/Club-stadium-seats.jpg",
 				"points": 30,
 				"description": "Upgrade your game ticket to a VIP experience with premium seating and access to exclusive areas."
 			}
