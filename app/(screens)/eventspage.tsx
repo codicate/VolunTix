@@ -1,12 +1,12 @@
-import { Redirect, Stack, useRouter, useLocalSearchParams } from 'expo-router';
-import React from 'react';
-import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
-import styles from 'app/stylesScreen';
-import volunteeringData from 'assets/server/events.json';
-import { registerForEvent } from '#configs/userStore';
+import { Redirect, Stack, useRouter, useLocalSearchParams } from "expo-router";
+import React from "react";
+import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
+import styles from "app/stylesScreen";
+import volunteeringData from "assets/server/events.json";
+import { registerForEvent } from "#configs/userStore";
 
-import { Card, Icon } from '@rneui/themed';
-import { AuthStore } from '#configs/authStore';
+import { Card, Icon } from "@rneui/themed";
+import { AuthStore } from "#configs/authStore";
 
 const EventsPage = () => {
 	const router = useRouter();
@@ -14,7 +14,7 @@ const EventsPage = () => {
 	const [registered, setRegistered] = React.useState(false);
 	const { eventid } = useLocalSearchParams();
 	const handleBackButtonClick = () => {
-		router.push('/events');
+		router.push("/events");
 	};
 
 	const handleVolunteerButtonClick = () => {
@@ -55,12 +55,12 @@ const EventsPage = () => {
 				<TouchableOpacity
 					style={{
 						...styles.volunteerButton,
-						backgroundColor: registered ? '#888' : '#2f95dc',
+						backgroundColor: registered ? "#888" : "#2f95dc",
 					}}
 					onPress={handleVolunteerButtonClick}
 				>
 					<Text style={styles.buttonText}>
-						{registered ? 'Registered' : 'Volunteer'}
+						{registered ? "Registered" : "Volunteer"}
 					</Text>
 				</TouchableOpacity>
 			</View>

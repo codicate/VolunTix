@@ -26,10 +26,11 @@ const styles = StyleSheet.create({
 	},
 	title: {
 		color: "white",
-		paddingTop: 95,
+		paddingTop: 85,
 		paddingBottom: 0,
 		marginBottom: 5,
 		paddingLeft: 12.5,
+		fontSize: 25,
 		textAlign: "left",
 	},
 	gradient: {
