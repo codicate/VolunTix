@@ -42,7 +42,6 @@ export const PastCard = ({
 	<View
 		style={{
 			flexDirection: "row",
-			justifyContent: "space-between",
 			paddingRight: 10,
 		}}
 	>
@@ -53,7 +52,7 @@ export const PastCard = ({
 			<Text style={styles.text}>{event.location}</Text>
 			<Text style={styles.date}>16 July</Text>
 		</View>
-		<Text style={{ paddingLeft: "30%", fontSize: 25 }}>⭐ 90</Text>
+		<Text style={{ marginLeft: "auto", fontSize: 25 }}>⭐ 90</Text>
 	</View>
 );
 

@@ -43,10 +43,32 @@ const More = () => {
 	const Tab = createMaterialTopTabNavigator();
 	const points = UserStore.useState((s) => s.points);
 	const registeredEvent = UserStore.useState((s) => s.registeredEvent);
-	console.log(registeredEvent);
+	const redeemedItems = UserStore.useState((s) => s.redeemedItems);
 
 	return (
 		<View style={{ backgroundColor: "white" }}>
+			<View
+				style={{
+					display: "flex",
+					flexDirection: "row",
+					alignItems: "center",
+					paddingVertical: 10,
+					paddingHorizontal: 20,
+					gap: 25,
+				}}
+			>
+				<Text
+					style={{
+						fontSize: 20,
+						fontWeight: "bold",
+						marginRight: "auto",
+					}}
+				>
+					Hi {user?.displayName}!
+				</Text>
+				<Icon name="sign-out" size={20} onPress={SignOut} />
+				<Icon name="bars" size={20} />
+			</View>
 			<View style={styles.container}>
 				<View style={styles.avatar}>
 					<Avatar
@@ -57,11 +79,14 @@ const More = () => {
 						}}
 					></Avatar>
 				</View>
-
 				<View style={styles.stats}>
 					<View style={styles.event}>
 						<Text style={styles.number}>2</Text>
 						<Text style={styles.label}>Events</Text>
+					</View>
+					<View style={styles.points}>
+						<Text style={styles.number}>{redeemedItems.length}</Text>
+						<Text style={styles.label}>Items</Text>
 					</View>
 					<View style={styles.points}>
 						<Text style={styles.number}>{points || 0}</Text>
@@ -70,27 +95,10 @@ const More = () => {
 				</View>
 			</View>
 			{registeredEvent && (
-				<View
-					style={{
-						paddingTop: 10,
-						display: "flex",
-						alignItems: "stretch",
-						backgroundColor: "#eee",
-					}}
-				>
-					<Text
-						style={{
-							fontSize: 16,
-							textAlign: "center",
-						}}
-					>
-						Registered Event
-					</Text>
-					<EventCard
-						event={volunteeringData[registeredEvent.id]}
-						onClick={showCheckIn}
-					/>
-				</View>
+				<EventCard
+					event={volunteeringData[registeredEvent.id]}
+					onClick={showCheckIn}
+				/>
 			)}
 			<CheckIn
 				isVisible={isModalVisible}
