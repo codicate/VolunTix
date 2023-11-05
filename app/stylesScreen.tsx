@@ -63,7 +63,7 @@ const styles = StyleSheet.create({
 		padding: 10,
 	},
 	volunteerButton: {
-		minHeight: 50,
+		minHeight: 40,
 		backgroundColor: "#007BFF",
 		padding: 10,
 		marginTop: 20,

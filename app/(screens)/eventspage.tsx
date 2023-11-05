@@ -3,18 +3,25 @@ import React from 'react';
 import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 import styles from 'app/stylesScreen';
 import volunteeringData from 'assets/server/events.json';
+import { registerForEvent } from '#configs/userStore';
 
 import { Card, Icon } from '@rneui/themed';
+import { AuthStore } from '#configs/authStore';
 
 const EventsPage = () => {
 	const router = useRouter();
+	const user = AuthStore.useState((s) => s.user);
+	const [registered, setRegistered] = React.useState(false);
 	const { eventid } = useLocalSearchParams();
 	const handleBackButtonClick = () => {
 		router.push('/events');
 	};
 
 	const handleVolunteerButtonClick = () => {
-		console.log(eventid);
+		if (user) {
+			registerForEvent(user, eventid as string);
+			setRegistered(true);
+		}
 	};
 
 	const currentVolunteering = volunteeringData[Number(eventid)];
@@ -46,10 +53,15 @@ const EventsPage = () => {
 					<Text style={styles.description}>{currentVolunteering.text}</Text>
 				</Card>
 				<TouchableOpacity
-					style={styles.volunteerButton}
+					style={{
+						...styles.volunteerButton,
+						backgroundColor: registered ? '#888' : '#2f95dc',
+					}}
 					onPress={handleVolunteerButtonClick}
 				>
-					<Text style={styles.buttonText}>Volunteer</Text>
+					<Text style={styles.buttonText}>
+						{registered ? 'Registered' : 'Volunteer'}
+					</Text>
 				</TouchableOpacity>
 			</View>
 		</View>

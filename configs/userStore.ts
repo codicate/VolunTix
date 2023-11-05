@@ -1,29 +1,27 @@
-import { db } from 'configs/firebase';
-import { Store, registerInDevtools } from 'pullstate';
-import { doc, setDoc, onSnapshot, getDoc } from 'firebase/firestore';
-import { User, updateProfile } from 'firebase/auth';
+import { db } from "configs/firebase";
+import { Store, registerInDevtools } from "pullstate";
+import { doc, setDoc, onSnapshot, getDoc, updateDoc } from "firebase/firestore";
+import { User, updateProfile } from "firebase/auth";
 
 interface UserStoreType {
 	displayName: string;
 	uid: string;
-	registeredEvent: {
+	registeredEvent?: {
+		id: number;
 		checkedIn: boolean;
 	};
 }
 
 export const UserStore = new Store<UserStoreType>({
-	displayName: '',
-	uid: '',
-	registeredEvent: {
-		checkedIn: false,
-	},
+	displayName: "",
+	uid: "",
 });
 
 registerInDevtools({ UserStore });
 
 export const createUser = async (user: User, displayName: string) => {
 	try {
-		const userDoc = doc(db, 'users', user.uid);
+		const userDoc = doc(db, "users", user.uid);
 		updateProfile(user, {
 			displayName: displayName,
 		});
@@ -31,9 +29,7 @@ export const createUser = async (user: User, displayName: string) => {
 		const docRef = await setDoc(userDoc, {
 			uid: user.uid,
 			displayName: displayName,
-			registeredEvent: {
-				checkedIn: false,
-			},
+			registeredEvent: null,
 		});
 
 		subscribeToUser(user.uid);
@@ -43,17 +39,37 @@ export const createUser = async (user: User, displayName: string) => {
 	}
 };
 
-export const subscribeToUser = async (uid: string) => {
-	console.log('subcribed to user changes');
-	const userDoc = doc(db, 'users', uid);
-	const data = (await getDoc(userDoc)).data() as UserStoreType;
+const updateUser = (data: UserStoreType) => {
 	UserStore.update((store) => {
-		store.registeredEvent.checkedIn = data.registeredEvent.checkedIn;
+		store.displayName = data.displayName;
+		store.uid = data.uid;
+		store.registeredEvent = data.registeredEvent;
 	});
+};
+
+export const subscribeToUser = async (uid: string) => {
+	console.log("subcribed to user changes");
+	const userDoc = doc(db, "users", uid);
+	const data = (await getDoc(userDoc)).data() as UserStoreType;
+	updateUser(data);
 
 	onSnapshot(userDoc, (doc) => {
-		UserStore.update((store) => {
-			store.registeredEvent.checkedIn = doc.data()?.registeredEvent.checkedIn;
-		});
+		updateUser(data);
+	});
+};
+
+export const registerForEvent = (user: User, id: string) => {
+	UserStore.update((store) => {
+		store.registeredEvent = {
+			id: id as unknown as number,
+			checkedIn: false,
+		};
+	});
+	const userDoc = doc(db, "users", user.uid);
+	updateDoc(userDoc, {
+		registeredEvent: {
+			id: id,
+			checkedIn: false,
+		},
 	});
 };

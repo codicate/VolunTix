@@ -1,9 +1,9 @@
-import { Modal, View, Text, Pressable, StyleSheet } from 'react-native';
-import MaterialIcons from '@expo/vector-icons/MaterialIcons';
-import QRCode from 'react-native-qrcode-svg';
-import { User } from 'firebase/auth';
-import Icon from '@expo/vector-icons/FontAwesome';
-import { UserStore } from '#configs/userStore';
+import { Modal, View, Text, Pressable, StyleSheet } from "react-native";
+import MaterialIcons from "@expo/vector-icons/MaterialIcons";
+import QRCode from "react-native-qrcode-svg";
+import { User } from "firebase/auth";
+import Icon from "@expo/vector-icons/FontAwesome";
+import { UserStore } from "#configs/userStore";
 
 export default function CheckIn({
 	isVisible,
@@ -14,9 +14,9 @@ export default function CheckIn({
 	user: User;
 	onClose: () => void;
 }) {
-	const checkedIn = UserStore.useState((s) => s.registeredEvent.checkedIn);
+	const registeredEvent = UserStore.useState((s) => s.registeredEvent);
 	if (!user) return null;
-	const qrCodeLink = 'https://codicate.github.io/jia?userId=' + user.uid;
+	const qrCodeLink = "https://codicate.github.io/jia?userId=" + user.uid;
 
 	return (
 		<Modal animationType="slide" transparent={true} visible={isVisible}>
@@ -28,7 +28,7 @@ export default function CheckIn({
 					</Pressable>
 				</View>
 				<View style={styles.content}>
-					{!checkedIn ? (
+					{!registeredEvent?.checkedIn ? (
 						<>
 							<View style={styles.flipped}>
 								<Text style={styles.info}>{user.displayName}</Text>
@@ -61,55 +61,55 @@ export default function CheckIn({
 
 const styles = StyleSheet.create({
 	modalContent: {
-		boxShadow: '0 -200px rgba(0,0,0,0.75)',
-		height: '90%',
-		width: '100%',
-		backgroundColor: '#25292e',
+		boxShadow: "0 -200px rgba(0,0,0,0.75)",
+		height: "90%",
+		width: "100%",
+		backgroundColor: "#25292e",
 		borderTopRightRadius: 18,
 		borderTopLeftRadius: 18,
-		position: 'absolute',
+		position: "absolute",
 		bottom: 0,
 	},
 	titleContainer: {
-		height: '8%',
-		backgroundColor: '#464C55',
+		height: "8%",
+		backgroundColor: "#464C55",
 		borderTopRightRadius: 10,
 		borderTopLeftRadius: 10,
 		paddingHorizontal: 20,
-		flexDirection: 'row',
-		alignItems: 'center',
-		justifyContent: 'space-between',
+		flexDirection: "row",
+		alignItems: "center",
+		justifyContent: "space-between",
 	},
 	title: {
-		color: '#fff',
+		color: "#fff",
 		fontSize: 18,
 	},
 	pickerContainer: {
-		flexDirection: 'row',
-		justifyContent: 'center',
-		alignItems: 'center',
+		flexDirection: "row",
+		justifyContent: "center",
+		alignItems: "center",
 		paddingHorizontal: 50,
 		paddingVertical: 20,
 	},
 	content: {
-		display: 'flex',
-		height: '92%',
-		flexDirection: 'column',
-		justifyContent: 'center',
-		alignItems: 'center',
+		display: "flex",
+		height: "92%",
+		flexDirection: "column",
+		justifyContent: "center",
+		alignItems: "center",
 		gap: 20,
 	},
 	flipped: {
-		transform: [{ rotate: '180deg' }],
+		transform: [{ rotate: "180deg" }],
 	},
 	info: {
-		color: '#bbb',
+		color: "#bbb",
 		fontSize: 18,
-		textAlign: 'center',
+		textAlign: "center",
 		marginVertical: 5,
 	},
 	qrCode: {
-		backgroundColor: '#fff',
+		backgroundColor: "#fff",
 		padding: 35,
 		borderRadius: 30,
 	},
