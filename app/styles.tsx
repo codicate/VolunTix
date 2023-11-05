@@ -15,8 +15,8 @@ const styles = StyleSheet.create({
 	},
 	card: {
 		padding: 0,
-		marginLeft: "2.5%",
-		marginRight: "2.5%",
+		marginVertical: 10,
+		marginHorizontal: "auto",
 		width: "95%",
 		height: "auto",
 		borderRadius: 10,
@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
 	},
 	navigator: {
 		display: "flex",
-		paddingTop: "5%",
+		paddingTop: 10,
 	},
 	icon: {},
 	pastcard: {
