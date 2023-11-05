@@ -6,15 +6,18 @@ import { User, updateProfile } from "firebase/auth";
 interface UserStoreType {
 	displayName: string;
 	uid: string;
+	points: number;
 	registeredEvent?: {
 		id: number;
 		checkedIn: boolean;
+		points: number;
 	};
 }
 
 export const UserStore = new Store<UserStoreType>({
 	displayName: "",
 	uid: "",
+	points: 0,
 });
 
 registerInDevtools({ UserStore });
@@ -29,6 +32,7 @@ export const createUser = async (user: User, displayName: string) => {
 		const docRef = await setDoc(userDoc, {
 			uid: user.uid,
 			displayName: displayName,
+			points: 0,
 			registeredEvent: null,
 		});
 
@@ -43,6 +47,7 @@ const updateUser = (data: UserStoreType) => {
 	UserStore.update((store) => {
 		store.displayName = data.displayName;
 		store.uid = data.uid;
+		store.points = data.points;
 		store.registeredEvent = data.registeredEvent;
 	});
 };
@@ -54,22 +59,19 @@ export const subscribeToUser = async (uid: string) => {
 	updateUser(data);
 
 	onSnapshot(userDoc, (doc) => {
-		updateUser(data);
+		updateUser(doc.data() as UserStoreType);
 	});
 };
 
-export const registerForEvent = (user: User, id: string) => {
-	UserStore.update((store) => {
-		store.registeredEvent = {
-			id: id as unknown as number,
-			checkedIn: false,
-		};
-	});
+export const registerForEvent = (user: User, event: any) => {
+	const newEvent = {
+		id: event.eventid,
+		checkedIn: false,
+		points: event.points,
+	};
+
 	const userDoc = doc(db, "users", user.uid);
 	updateDoc(userDoc, {
-		registeredEvent: {
-			id: id,
-			checkedIn: false,
-		},
+		registeredEvent: newEvent,
 	});
 };

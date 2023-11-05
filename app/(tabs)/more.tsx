@@ -2,7 +2,6 @@ import { Stack, useRouter, Link } from "expo-router";
 import { useState } from "react";
 import { Text, StyleSheet, View, Pressable } from "react-native";
 import { appSignOut } from "#configs/authStore";
-import { Button } from "react-native-elements";
 import Icon from "@expo/vector-icons/FontAwesome";
 import { AuthStore } from "#configs/authStore";
 import CheckIn from "#components/CheckIn";
@@ -42,6 +41,7 @@ const More = () => {
 	};
 
 	const Tab = createMaterialTopTabNavigator();
+	const points = UserStore.useState((s) => s.points);
 	const registeredEvent = UserStore.useState((s) => s.registeredEvent);
 	console.log(registeredEvent);
 
@@ -60,11 +60,11 @@ const More = () => {
 
 				<View style={styles.stats}>
 					<View style={styles.event}>
-						<Text style={styles.number}>34</Text>
+						<Text style={styles.number}>2</Text>
 						<Text style={styles.label}>Events</Text>
 					</View>
 					<View style={styles.points}>
-						<Text style={styles.number}>120</Text>
+						<Text style={styles.number}>{points || 0}</Text>
 						<Text style={styles.label}>Points</Text>
 					</View>
 				</View>
