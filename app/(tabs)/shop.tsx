@@ -60,7 +60,7 @@ const Shop = () => {
 					</View>
 				</View>
 				<Icon
-					size={25}
+					size={22}
 					name="filter"
 					color="black"
 					style={{ marginRight: "6%" }}
@@ -103,7 +103,11 @@ const Shop = () => {
 						backgroundColor: "rgba(128, 128, 128, 0.3)",
 						borderColor: "rgba(128, 128, 128, 0.3)",
 						borderRadius: 12.5,
-						width: "40%",
+						width: "auto",
+						paddingVertical: 10,
+						paddingHorizontal: 20,
+						height: 40,
+						marginTop: 5,
 					}}
 				>
 					<View
@@ -124,7 +128,12 @@ const Shop = () => {
 						backgroundColor: "rgba(128, 128, 128, 0.3)",
 						borderColor: "rgba(128, 128, 128, 0.3)",
 						borderRadius: 12.5,
-						width: "25%",
+						width: "auto",
+						paddingVertical: 10,
+						paddingHorizontal: 20,
+						height: 40,
+						marginTop: 5,
+						marginLeft: 0,
 					}}
 				>
 					<View
