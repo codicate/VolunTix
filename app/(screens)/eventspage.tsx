@@ -130,7 +130,9 @@ const EventsPage = () => {
 								}}
 							>
 								<View>
-									<Text style={{ fontSize: 20 }}>120 Points Available</Text>
+									<Text style={{ fontSize: 20 }}>
+										{currentVolunteering.points} Points Available
+									</Text>
 								</View>
 								<View style={{ flexWrap: "wrap", maxWidth: "25%" }}>
 									<Text

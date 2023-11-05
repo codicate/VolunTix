@@ -8,7 +8,7 @@ import { AuthStore } from "#configs/authStore";
 import { redeemItem } from "#configs/userStore";
 import Icon from "react-native-vector-icons/Feather";
 
-const EventsPage = () => {
+const ItemPage = () => {
 	const user = AuthStore.useState((s) => s.user);
 	const router = useRouter();
 	const { eventid, itemid } = useLocalSearchParams();
@@ -25,7 +25,7 @@ const EventsPage = () => {
 			return event.items[Number(itemid) - 1];
 		}
 	};
-	const item = event;
+	const item = event.items[Number(itemid) - 1];
 	const handleRedeemButtonClick = async (itemName: string, itemPoints: any) => {
 		if (user == null) return;
 		const res = await redeemItem(user, {
@@ -71,12 +71,11 @@ const EventsPage = () => {
 						paddingBottom: "5%",
 					}}
 				>
-					<Text style={{ color: "#1a237e", fontSize: 20 }}>{item.type}</Text>
 					<Text style={{ color: "black", fontWeight: "bold", fontSize: 35 }}>
 						{item.name}
 					</Text>
 					<Text style={{ marginTop: "2.5%", color: "gray", fontSize: 20 }}>
-						@ <u>{item.location}</u>
+						From <u>{event.title}</u>
 					</Text>
 				</View>
 				<View></View>
@@ -88,40 +87,6 @@ const EventsPage = () => {
 						gap: 10,
 					}}
 				>
-					<View
-						style={{
-							flexDirection: "row",
-							alignItems: "center",
-						}}
-					>
-						<Icon name="calendar" size={12.5} color="black" />
-						<Text
-							style={{
-								color: "black",
-								fontSize: 20,
-								marginLeft: 10,
-							}}
-						>
-							{item.date}
-						</Text>
-					</View>
-					<View
-						style={{
-							flexDirection: "row",
-							alignItems: "center",
-						}}
-					>
-						<Icon name="map-pin" size={12.5} color="black" />
-						<Text
-							style={{
-								color: "black",
-								fontSize: 20,
-								marginLeft: 10,
-							}}
-						>
-							<u>{item.street}</u>
-						</Text>
-					</View>
 					<View
 						style={{
 							flexDirection: "row",
@@ -192,4 +157,4 @@ const EventsPage = () => {
 	);
 };
 
-export default EventsPage;
+export default ItemPage;
