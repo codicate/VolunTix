@@ -54,7 +54,21 @@ export const PastCard = ({
 			<Text style={styles.text}>{event.location}</Text>
 			<Text style={styles.date}>16 July</Text>
 		</View>
-		<Text style={{ marginLeft: "auto", fontSize: 25 }}>⭐ 90</Text>
+		<View style={{ flexDirection: "column", marginLeft: "7.5%" }}>
+			<Text
+				style={{
+					fontSize: 20,
+					fontFamily: "Arial",
+					marginLeft: "auto",
+					marginRight: "auto",
+				}}
+			>
+				90
+			</Text>
+			<Text style={{ fontSize: 20, marginLeft: "auto", marginRight: "auto" }}>
+				Points
+			</Text>
+		</View>
 	</View>
 );
 
