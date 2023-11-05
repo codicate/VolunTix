@@ -5,7 +5,7 @@ const screenHeight = Dimensions.get("screen").height;
 
 const styles = StyleSheet.create({
 	header: {
-		backgroundColor: "#f8f8f8",
+		backgroundColor: "#ffffff",
 		padding: 10,
 		borderBottomWidth: 1,
 		borderBottomColor: "#ddd",
