@@ -27,12 +27,12 @@ const redeem = () => {
 				style={styles.image}
 			/>
 			<Text style={styles.text}>
-				Congratulations! you have redemeed the {itemName} for {itemPoints}{" "}
-				Impact Points!
+				Congratulations! You have redemeed the {itemName}! <br></br>Thank you
+				for volunteering!
 			</Text>
 			<Text style={styles.text}>Go to your User page to see your ticket!</Text>
 			<Button style={styles.button} onPress={() => router.push("/more")}>
-				<Text style={styles.buttonText}>Take me there!</Text>
+				<Text style={styles.buttonText}>Take me there</Text>
 			</Button>
 		</View>
 		// back button
