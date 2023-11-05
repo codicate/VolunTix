@@ -55,6 +55,7 @@ const updateUser = (data: UserStoreType) => {
 		store.uid = data.uid;
 		store.points = data.points;
 		store.registeredEvent = data.registeredEvent;
+		store.redeemedItems = data.redeemedItems;
 	});
 };
 
@@ -97,7 +98,7 @@ export const redeemItem = async (user: User, input: Input) => {
 			points: data.points - input.itemPoints,
 			redeemedItems: [
 				...data.redeemedItems,
-				{ eventid: input.eventid, itemid: input.itemid },
+				{ eventid: Number(input.eventid), itemid: Number(input.itemid) },
 			],
 		});
 		return true;
