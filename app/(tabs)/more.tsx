@@ -47,7 +47,7 @@ const More = () => {
 	const redeemedItems = UserStore.useState((s) => s.redeemedItems);
 
 	return (
-		<View style={{ backgroundColor: "white" }}>
+		<View style={{ backgroundColor: "white", flex: 1 }}>
 			<View
 				style={{
 					display: "flex",

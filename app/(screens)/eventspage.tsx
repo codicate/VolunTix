@@ -126,23 +126,29 @@ const EventsPage = () => {
 						<View
 							style={{
 								flexDirection: "column",
+								gap: 20,
 							}}
 						>
-							<Text
-								style={{
-									color: "black",
-									fontWeight: "bold",
-									fontSize: 20,
-								}}
-							>
-								Event Details
-							</Text>
-							<Text>{currentVolunteering.text}</Text>
+							<View>
+								<Text style={{ fontSize: 20 }}>120 Points Available</Text>
+							</View>
+							<View>
+								<Text
+									style={{
+										color: "black",
+										fontWeight: "bold",
+										fontSize: 20,
+									}}
+								>
+									Event Details
+								</Text>
+								<Text>{currentVolunteering.text}</Text>
+							</View>
 						</View>
 					</View>
 					<View
 						style={{
-							marginTop: "5%",
+							marginTop: "3%",
 							flexDirection: "row",
 							alignItems: "center",
 						}}
