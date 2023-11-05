@@ -58,7 +58,7 @@ const EventsPage = () => {
 						{currentVolunteering.title}
 					</Text>
 					<Text style={{ marginTop: "2.5%", color: "gray", fontSize: 20 }}>
-						By <u>Goodwill New York</u>
+						By <u>{currentVolunteering.organizer}</u>
 					</Text>
 				</View>
 				<View>
@@ -96,7 +96,7 @@ const EventsPage = () => {
 								marginLeft: 10,
 							}}
 						>
-							Nov 3
+							{currentVolunteering.date}
 						</Text>
 					</View>
 					<View
@@ -113,7 +113,7 @@ const EventsPage = () => {
 								marginLeft: 10,
 							}}
 						>
-							<u>123 Example Street</u>
+							<u>{currentVolunteering.street}</u>
 						</Text>
 					</View>
 					<View
