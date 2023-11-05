@@ -5,41 +5,41 @@
 		"avatar": "avatar1.jpg",
 		"title": "Arsenal vs Chelsea",
 		"image": "https://e00-marca.uecdn.es/assets/multimedia/imagenes/2022/09/12/16629868110245.jpg",
-		"type": "Sports",
+		"type": "Sports Event",
 		"name": "Game Ticket",
 		"location": "Emirates Stadium",
 		"text": "Premier League Game",
 		"points": 100,
 		"description": "Watch the most anticipated soccer of the season, live at the Emirates Stadium. The game will be between Arsenal and Chelsea. Live the experience of watching the best players in the world live with your impact points.",
-		"date": "2023-11-03T00:00:00.000Z",
+		"date": "November 3, 2023",
 		"items": [
 			{
 				"itemid": 1,
 				"name": "Match Ball",
 				"image": "https://cdn.theathletic.com/cdn-cgi/image/width=1200,height=900,fit=cover/app/uploads/2023/07/14081939/premier-league-ball-22-23-scaled.jpeg",
 				"points": 10,
-				"description": "Real match ball used in the game"
+				"description": "Real match ball used in the game between Arsenal and Chelsea. Signed by the players. Get it now!"
 			},
 			{
 				"itemid": 2,
 				"name": "Signed Shirt",
-				"image": "https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg",
+				"image": "https://x1.adis.ws/v1/media/graphics/i/ArsenalDirect/MHR6929_pl?patches=patches_MHR6929-pl&name=SAKA&numbers=pl-home__2023-24--7",
 				"points": 20,
-				"description": "Signed by the Leonel Messi"
+				"description": "Signed by the Bukayo Saka the famous Arsenal soccer player. Bukayo Ayoyinka Temidayo Saka is an English professional footballer who plays as a right winger for Premier League club Arsenal and the England national team. He is considered to be one of the best young wingers in the world."
 			},
 			{
 				"itemid": 3,
-				"name": "Signed Shirt",
-				"image": "https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg",
+				"name": "Signed Poster",
+				"image": "https://cdn.shopify.com/s/files/1/0113/6171/4238/products/Arsenal_Pierre-Emerick_Aubameyang_signed_12x8_5e74926a-fcdd-4c76-adde-66e31f29fc0b_540x.png?v=1687431437",
 				"points": 10,
-				"description": "Signed by the Christiano Ronaldo"
+				"description": "Poster of the Arsenal soccer player Pierre-Emerick Aubameyang. Pierre-Emerick Emiliano François Aubameyang is a professional footballer who plays as a forward and is the captain of both Premier League club Arsenal and the Gabon national team. He is considered to be one of the best strikers in the world."
 			},
 			{
 				"itemid": 4,
-				"name": "Match Ball",
-				"image": "https://cdn.theathletic.com/cdn-cgi/image/width=1200,height=900,fit=cover/app/uploads/2023/07/14081939/premier-league-ball-22-23-scaled.jpeg",
+				"name": "Signed Shirt",
+				"image": "https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg",
 				"points": 10,
-				"description": "Real match ball used in the game"
+				"description": "Signed by the Thierry Henry. He is a French professional football coach, pundit, sports broadcaster and former player. He is currently the manager of the France national under-21 team. He is considered one of the greatest strikers of all time, and one of the greatest players in Premier League history."
 			}
 		]
 	},
@@ -55,34 +55,123 @@
 		"text": "Music Concert",
 		"points": 150,
 		"description": "Watch the most anticipated concert of the year, live at the Madison Square Garden. The concert will be performed by the Rolling Stones. Live the experience of watching the best artists in the world live with your impact points.",
-		"date": "2023-11-03T00:00:00.000Z",
+		"date": "November 24, 2023",
 		"items": [
 			{
 				"itemid": 1,
 				"name": "Signed Poster",
-				"image": "https://cdn.theathletic.com/cdn-cgi/image/width=1200,height=900,fit=cover/app/uploads/2023/07/14081939/premier-league-ball-22-23-scaled.jpeg",
+				"image": "https://cdn.shoplightspeed.com/shops/633679/files/54799825/800x1024x2/the-rolling-stones-ready-steady-go-mick-jagger-196.jpg",
 				"points": 10,
 				"description": "Signed by the Rolling Stones"
 			},
 			{
 				"itemid": 2,
 				"name": "Signed Guitar",
-				"image": "https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg",
+				"image": "https://cdn.shoplightspeed.com/shops/633679/files/54799825/800x1024x2/the-rolling-stones-ready-steady-go-mick-jagger-196.jpg",
 				"points": 40,
-				"description": "Signed by the Rolling Stones"
+				"description": "Guitar played by the legendary Keith Richards. Keith Richards is an English musician, singer, and songwriter. He is best known as the co-founder, guitarist, secondary vocalist, and co-principal songwriter of the Rolling Stones."
 			},
 
 			{
 				"itemid": 3,
 				"name": "Signed Shirt",
-				"image": "https://thematchdayshop.com/cdn/shop/products/fa1b11_407f76bfd9a445acba98119707d22785_mv2.jpg",
+				"image": "https://m.media-amazon.com/images/I/51bn6Ntq64L._AC_SX679_.jpg",
 				"points": 5,
 				"description": "Signed by the Rolling Stones"
 			},
 			{
 				"itemid": 4,
 				"name": "Signed CD",
-				"image": "https://cdn.theathletic.com/cdn-cgi/image/width=1200,height=900,fit=cover/app/uploads/2023/07/14081939/premier-league-ball-22-23-scaled.jpeg"
+				"image": "https://merchbar.imgix.net/product/4/1616/43819508/DkojtWV84248878-3040541.jpg?",
+				"points": 15
+			}
+		]
+	},
+	{
+		"eventid": 2,
+		"itemid": 0,
+		"avatar": "taylor_swift_avatar.jpg",
+		"title": "Taylor Swift's Reputation Tour",
+		"image": "https://arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/R66IEXIXSVHL5NRATWDRPFR3U4.jpg",
+		"type": "Concert",
+		"name": "Concert Ticket",
+		"location": "Venue Name",
+		"text": "Music Concert",
+		"points": 120,
+		"description": "Get ready to witness Taylor Swift's Reputation Tour live in concert. Experience the enchanting performance by Taylor Swift and her band with your impact points.",
+		"date": "December 3, 2023",
+		"items": [
+			{
+				"itemid": 1,
+				"name": "Autographed Poster",
+				"image": "https://www.theindieplanet.store/cdn/shop/products/02-aa-mockup-taylorswift-midnights-2.png?v=1679376209",
+				"points": 10,
+				"description": "A poster autographed by Taylor Swift herself."
+			},
+			{
+				"itemid": 2,
+				"name": "VIP Backstage Pass",
+				"image": "https://shoflo.tv/wp-content/uploads/2018/01/Vienna_-_Vienna_Opera_Backstage_-_9706.jpg",
+				"points": 40,
+				"description": "Access to the backstage area to meet Taylor Swift and the band."
+			},
+			{
+				"itemid": 3,
+				"name": "Taylor Swift Merchandise Bundle",
+				"image": "https://ucarecdn.com/f49cb6c9-bf48-4853-9ad4-30c6d7f48bb0/-/format/auto/-/preview/3000x3000/-/quality/lighter/Box%20Set.png",
+				"points": 20,
+				"description": "A bundle of Taylor Swift merchandise items, including a t-shirt, keychain, and more."
+			},
+			{
+				"itemid": 4,
+				"name": "Signed CD",
+				"image": "https://ucarecdn.com/f49cb6c9-bf48-4853-9ad4-30c6d7f48bb0/-/format/auto/-/preview/3000x3000/-/quality/lighter/Box%20Set.png",
+				"points": 15,
+				"description": "A CD of Taylor Swift's latest album, personally signed by her."
+			}
+		]
+	},
+	{
+		"eventid": 3,
+		"itemid": 0,
+		"avatar": "football_game_avatar.jpg",
+		"title": "Buffalo Bills vs. Kansas City Chiefs",
+		"image": "https://static.www.nfl.com/image/private/t_editorial_landscape_12_desktop/league/ktgeaont6jrsonm1aebq",
+		"type": "Sports Event",
+		"name": "Game Ticket",
+		"location": "Arrowhead Stadium",
+		"text": "NFL Game",
+		"points": 80,
+		"description": "Don't miss the excitement of the Buffalo Bills vs. Kansas City Chiefs NFL game at Arrowhead Stadium. Watch two top NFL teams battle it out for victory with your impact points.",
+		"date": "November 16, 2023",
+		"items": [
+			{
+				"itemid": 1,
+				"name": "VIP Tailgate Pass",
+				"image": "https://i0.wp.com/www.gamedayhospitality.com/wp-content/uploads/2022/10/Buffalo-Red-Zone-Temp-Logo.png?fit=1020%2C1220&quality=80&ssl=1",
+				"points": 25,
+				"description": "Access to the VIP tailgate party before the game with food, drinks, and entertainment."
+			},
+			{
+				"itemid": 2,
+				"name": "Team Jersey",
+				"image": "https://shop.buffalobills.com/cdn/shop/products/BILLMZ0001A_ALLEN.jpg?v=1627477174",
+				"points": 15,
+				"description": "Official team jersey of either the Buffalo Bills or the Kansas City Chiefs, your choice."
+			},
+			{
+				"itemid": 3,
+				"name": "Autographed Football",
+				"image": "https://m.media-amazon.com/images/I/91J2XA2akqL.jpg",
+				"points": 30,
+				"description": "A football signed by notable players from both teams."
+			},
+			{
+				"itemid": 4,
+				"name": "End Zone Seats Upgrade",
+				"image": "https://www.evertaut.co.uk/wp-content/uploads/2018/12/Club-stadium-seats.jpg",
+				"points": 20,
+				"description": "Upgrade your game ticket to premium end zone seats for a better view."
 			}
 		]
 	}

@@ -2,10 +2,14 @@
 	{
 		"eventid": 0,
 		"image": "https://rochester.edu/college/wcsa/assets/images/pantry.jpg",
-		"title": "Food Drive",
+		"title": "Food Run for Hunger Relief",
 		"points": 100,
 		"location": "Queens, NY",
-		"text": "Donate food, save lives"
+		"street": "3234 Main Street",
+		"distance": "16 miles",
+		"date": "November 10, 2023",
+		"organizer": "Goodwill New York",
+		"text": "Participate in the Food Run for Hunger Relief and make a meaningful impact. Run or walk to collect non-perishable food items and then deliver them to local hunger relief organizations. Help fight hunger in our community and support those in need."
 	},
 	{
 		"eventid": 1,
@@ -13,6 +17,82 @@
 		"title": "Blood Drive",
 		"points": 200,
 		"location": "Central Park, NY",
+		"street": "North 110 Street",
+		"distance": "5 miles",
+		"date": "November 15, 2023",
+		"organizer": "American Red Cross",
 		"text": "Donate blood, save lives"
+	},
+	{
+		"eventid": 2,
+		"image": "https://i.natgeofe.com/k/3519980b-ba58-456d-b691-2ed516c223e0/clean-it-up-textimage_3x2.jpg",
+		"title": "Community Cleanup",
+		"points": 80,
+		"location": "Brooklyn, NY",
+		"street": "1234 Main Avenue",
+		"distance": "10 miles",
+		"date": "November 20, 2023",
+		"organizer": "NYC Parks",
+		"text": "Join us in cleaning up our local community."
+	},
+	{
+		"eventid": 3,
+		"image": "https://blog.clickmeeting.com/uploads//2023/01/blog-43-1300x515.jpg",
+		"title": "Environmental Seminar",
+		"points": 150,
+		"location": "Manhattan, NY",
+		"street": "34th Street",
+		"distance": "2 miles",
+		"date": "December 5, 2023",
+		"organizer": "NYC Parks",
+		"text": "Learn about environmental issues and how to make a positive impact."
+	},
+	{
+		"eventid": 4,
+		"image": "https://better.net/chicago/wp-content/uploads/sites/2/2017/07/charity-run-Run-for-Gus-Lurie.jpg",
+		"title": "Charity Run",
+		"points": 250,
+		"location": "Prospect Park, NY",
+		"street": "1234 Main Avenue",
+		"distance": "7 miles",
+		"date": "December 10, 2023",
+		"organizer": "Citibank",
+		"text": "Participate in a charity run to support a good cause."
+	},
+	{
+		"eventid": 5,
+		"image": "https://www.indianola.k12.ia.us/app/uploads/2017/08/iStock-533434790-cropped.jpg",
+		"title": "Children's Education Workshop",
+		"points": 120,
+		"location": "Queens, NY",
+		"street": "1234 Main Avenue",
+		"distance": "5 miles",
+		"date": "November 28, 2023",
+		"organizer": "Manhattan School District",
+		"text": "Help educate and mentor children in your community."
+	},
+	{
+		"eventid": 6,
+		"image": "https://ahs-files.s3.us-east-2.amazonaws.com/live/public/styles/crop_16_9_960x540/public/media/image/2021-08/volunteer-holding-orange-tabby-kitten.jpg?h=56d0ca2e&itok=6e0A9CCJ",
+		"title": "Animal Shelter Volunteer",
+		"points": 90,
+		"location": "Bronx, NY",
+		"street": "1234 Main Avenue",
+		"distance": "12 miles",
+		"date": "December 3, 2023",
+		"organizer": "NYC Animal Shelter",
+		"text": "Spend time caring for and helping animals at the local shelter."
+	},
+	{
+		"eventid": 7,
+		"image": "https://www.midwest-health.com/mhblog/wp-content/uploads/sites/66/2018/09/Largest-gathering-of-centenarians_tcm25-496179.jpg",
+		"title": "Senior Citizens' Social",
+		"points": 70,
+		"location": "Staten Island, NY",
+		"street": "1234 Main Avenue",
+		"distance": "20 miles",
+		"date": "December 8, 2023",
+		"organizer": "NYC Senior Center",
+		"text": "Spend quality time with senior citizens and brighten their day."
 	}
 ]
