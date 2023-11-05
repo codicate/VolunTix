@@ -164,17 +164,15 @@ export const EventCard = ({
 	<TouchableOpacity onPress={() => onClick?.(event.eventid)}>
 		<Card containerStyle={styles.card}>
 			<Card.Image source={{ uri: event.image }} style={styles.card.image}>
-				<Card.Title style={styles.title}>{event.title}</Card.Title>
-				<Card.FeaturedSubtitle style={styles.subtitle}>
-					{event.location} • {event.distance}
-				</Card.FeaturedSubtitle>
-
 				<LinearGradient
-					colors={["transparent", "rgba(0,0,0,0.5)", "black"]}
-					start={{ x: 0, y: 0 }}
-					end={{ x: 1, y: 1 }}
-					style={{ position: "absolute", bottom: 0, height: "33.33%" }}
-				/>
+					colors={["transparent", "rgba(0, 0, 0, 0.85)"]}
+					style={{ flex: 1, justifyContent: "center" }}
+				>
+					<Card.Title style={styles.title}>{event.title}</Card.Title>
+					<Card.FeaturedSubtitle style={styles.subtitle}>
+						{event.location} • {event.distance}
+					</Card.FeaturedSubtitle>
+				</LinearGradient>
 			</Card.Image>
 		</Card>
 	</TouchableOpacity>

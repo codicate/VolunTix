@@ -20,6 +20,7 @@ const styles = StyleSheet.create({
 		width: "95%",
 		height: "auto",
 		borderRadius: 10,
+		overflow: "hidden",
 		image: {
 			borderRadius: 10,
 		},
@@ -56,7 +57,7 @@ const styles = StyleSheet.create({
 		padding: 0,
 		width: screenWidth / 4,
 		marginLeft: 0,
-		marginRight: 5,
+		marginRight: 10,
 		borderRadius: 12.5,
 		image: {
 			padding: 0,
