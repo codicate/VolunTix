@@ -78,7 +78,7 @@ const More = () => {
 						rounded
 						size={80}
 						source={{
-							uri: "https://st.depositphotos.com/1144472/2003/i/950/depositphotos_20030237-stock-photo-cheerful-young-man-over-white.jpg",
+							uri: "https://i.ibb.co/WDWSgtq/393415342-649993317266403-4241104250267537565-n.jpg",
 						}}
 					></Avatar>
 				</View>
