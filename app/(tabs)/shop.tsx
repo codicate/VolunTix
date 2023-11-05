@@ -29,6 +29,14 @@ const Shop = () => {
 		// console.log(eventid, itemid);
 	};
 
+	const handleItemClick = (eventid: number, itemid: number) => {
+		// Handle card click
+		router.push({
+			pathname: `/itempage`,
+			params: { eventid: eventid, itemid: itemid },
+		});
+	};
+
 	return (
 		<View style={{ flexDirection: "column", gap: 10, flex: 1 }}>
 			<View
@@ -159,7 +167,7 @@ const Shop = () => {
 									>
 										<Card.Title style={styles.title}>{event.title}</Card.Title>
 										<Card.FeaturedSubtitle style={styles.subtitle}>
-											{event.location} • 5 miles
+											{event.location}
 										</Card.FeaturedSubtitle>
 									</LinearGradient>
 								</Card.Image>
@@ -169,7 +177,7 @@ const Shop = () => {
 							{event.items?.map((item, index) => (
 								<TouchableOpacity
 									key={index}
-									onPress={() => handleCardClick(idx, index + 1)}
+									onPress={() => handleItemClick(idx, index + 1)}
 								>
 									<Card containerStyle={styles.carousal_card} key={index}>
 										<Card.Image

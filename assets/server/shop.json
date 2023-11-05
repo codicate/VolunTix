@@ -7,6 +7,7 @@
 		"image": "https://s.secure.espncdn.com/stitcher/artwork/16x9.jpg?height=720&width=1280&cb=12&templateId=espn.core.dtc.large.16x9.1&source=https://artwork.espncdn.com/events/401355679/16x9/1280x720_20220621172623.jpg&showBadge=true&package=ESPN_PLUS_MLB",
 		"type": "Sports Event",
 		"name": "Game Ticket",
+		"street": "1 E 161st St",
 		"location": "Yankee Stadium",
 		"text": "MLB Baseball Game",
 		"points": 100,
@@ -18,7 +19,7 @@
 				"name": "Baseball Souvenir",
 				"image": "https://shoplegends.com/cdn/shop/products/Mike-Trout.jpg?v=1658320909",
 				"points": 10,
-				"description": "Get a souvenir baseball from the game to remember this exciting match."
+				"description": "Capture the magic of America's favorite pastime with our exclusive Baseball Souvenir. The baseball is signed by the Yankees and Mets players. Get your hands on this limited edition souvenir in exchange for your impact points."
 			},
 			{
 				"itemid": 2,
@@ -51,6 +52,7 @@
 		"image": "https://media.npr.org/assets/img/2021/09/27/ap21270096664048-f8940df4e2103ac8dfab80c847e3e0fd6afb1bb1-s1100-c50.jpg",
 		"type": "Concert",
 		"name": "Concert Ticket",
+		"street": "4 Pennsylvania Plaza",
 		"location": "Madison Square Garden",
 		"text": "Music Concert",
 		"points": 150,
@@ -95,6 +97,7 @@
 		"image": "https://arc-anglerfish-arc2-prod-pmn.s3.amazonaws.com/public/R66IEXIXSVHL5NRATWDRPFR3U4.jpg",
 		"type": "Concert",
 		"name": "Concert Ticket",
+		"street": "4 Pennsylvania Plaza",
 		"location": "Madison Square Garden",
 		"text": "Music Concert",
 		"points": 120,
@@ -139,6 +142,7 @@
 		"image": "https://static.clubs.nfl.com/image/private/t_editorial_landscape_12_desktop/jets/uzmo5mm1z35csq4qvqn9",
 		"type": "Sports Event",
 		"name": "Game Ticket",
+		"street": "1 MetLife Stadium Dr",
 		"location": "MetLife Stadium",
 		"text": "NFL Game",
 		"points": 80,
