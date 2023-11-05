@@ -99,6 +99,7 @@ const More = () => {
 			{registeredEvent && (
 				<EventCard
 					event={volunteeringData[registeredEvent.id]}
+					daysLeft={5}
 					onClick={showCheckIn}
 				/>
 			)}

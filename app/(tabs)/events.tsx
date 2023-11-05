@@ -156,9 +156,11 @@ const Events = () => {
 
 export const EventCard = ({
 	event,
+	daysLeft,
 	onClick,
 }: {
 	event: any;
+	daysLeft?: number;
 	onClick?: (eventid: number) => void;
 }) => (
 	<TouchableOpacity onPress={() => onClick?.(event.eventid)}>
@@ -170,7 +172,9 @@ export const EventCard = ({
 				>
 					<Card.Title style={styles.title}>{event.title}</Card.Title>
 					<Card.FeaturedSubtitle style={styles.subtitle}>
-						{event.location} • {event.distance}
+						{daysLeft
+							? `Coming up in ${daysLeft} days`
+							: `${event.location} • ${event.distance}`}
 					</Card.FeaturedSubtitle>
 				</LinearGradient>
 			</Card.Image>
