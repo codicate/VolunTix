@@ -6,5 +6,7 @@
 		"package-lock.json": true
 	},
 	"editor.tabSize": 2,
-	"prettier.singleQuote": true
+	"prettier.singleQuote": true,
+	"prettier.endOfLine": "auto",
+	"prettier.useTabs": true
 }
