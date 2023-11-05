@@ -2,19 +2,20 @@ import { Redirect, Stack, useRouter, useLocalSearchParams } from "expo-router";
 import React from "react";
 import { View, Text, StyleSheet, Image, TouchableOpacity } from "react-native";
 import styles from "app/stylesScreen";
-import volunteeringData from "assets/server/shop.json";
-import { StatusBar } from "expo-status-bar";
-
+import shopData from "assets/server/shop.json";
 import { Card, Icon } from "@rneui/themed";
+import { AuthStore } from "#configs/authStore";
+import { redeemItem } from "#configs/userStore";
 
 const EventsPage = () => {
+	const user = AuthStore.useState((s) => s.user);
 	const router = useRouter();
 	const { eventid, itemid } = useLocalSearchParams();
 	const handleBackButtonClick = () => {
 		router.push("/shop");
 	};
 
-	const event = volunteeringData[Number(eventid)];
+	const event = shopData[Number(eventid)];
 
 	const zeroIndexItem = (itemid: any) => {
 		if (Number(itemid) == 0) {
@@ -24,17 +25,26 @@ const EventsPage = () => {
 		}
 	};
 	const item = zeroIndexItem(itemid);
-	const handleRedeemButtonClick = (itemName: any, itemPoints: any) => {
-		console.log(itemPoints);
-		router.push({
-			pathname: `/redeem`,
-			params: {
-				eventid: eventid,
-				itemId: itemid,
-				itemName: itemName,
-				itemPoints: itemPoints.toString(),
-			},
+	const handleRedeemButtonClick = async (itemName: string, itemPoints: any) => {
+		if (user == null) return;
+		const res = await redeemItem(user, {
+			itemPoints: itemPoints,
+			eventid: eventid as unknown as number,
+			itemid: itemid as unknown as number,
 		});
+		if (res) {
+			router.push({
+				pathname: `/redeem`,
+				params: {
+					eventid: eventid,
+					itemid: itemid,
+					itemName: itemName,
+					itemPoints: itemPoints.toString(),
+				},
+			});
+		} else {
+			console.log("not enough points!");
+		}
 	};
 
 	return (
