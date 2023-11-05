@@ -11,20 +11,18 @@ function TabBarIcon(props: {
 	name: React.ComponentProps<typeof Icon>["name"];
 	color: string;
 }) {
-	return <Icon size={28} style={{ marginBottom: -3 }} {...props} />;
+	return <Icon size={22} style={{ marginBottom: -3 }} {...props} />;
 }
 
 export default function TabLayout() {
-	const { initialized, isLoggedIn } = AuthStore.useState();
-
 	return (
 		<Tabs
 			screenOptions={{
 				tabBarActiveTintColor: Colors["light"].tint,
 				headerShown: false,
 				tabBarStyle: {
-					height: 64,
-					paddingBottom: 8,
+					height: 58,
+					paddingBottom: 7,
 				},
 			}}
 		>
