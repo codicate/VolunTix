@@ -21,8 +21,8 @@ export default function TabLayout() {
 				tabBarActiveTintColor: Colors["light"].tint,
 				headerShown: false,
 				tabBarStyle: {
-					height: 58,
-					paddingBottom: 7,
+					height: 50,
+					paddingBottom: 10,
 				},
 			}}
 		>
@@ -45,8 +45,8 @@ export default function TabLayout() {
 			<Tabs.Screen
 				name="more"
 				options={{
-					title: "More",
-					tabBarIcon: ({ color }) => <TabBarIcon name="bars" color={color} />,
+					title: "User",
+					tabBarIcon: ({ color }) => <TabBarIcon name="user" color={color} />,
 				}}
 			/>
 		</Tabs>

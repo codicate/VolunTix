@@ -45,6 +45,7 @@ const More = () => {
 	const points = UserStore.useState((s) => s.points);
 	const registeredEvent = UserStore.useState((s) => s.registeredEvent);
 	const redeemedItems = UserStore.useState((s) => s.redeemedItems);
+	const completedEvents = UserStore.useState((s) => s.completedEvents);
 
 	return (
 		<View style={{ backgroundColor: "white", flex: 1 }}>
@@ -83,7 +84,7 @@ const More = () => {
 				</View>
 				<View style={styles.stats}>
 					<View style={styles.event}>
-						<Text style={styles.number}>2</Text>
+						<Text style={styles.number}>{completedEvents.length}</Text>
 						<Text style={styles.label}>Events</Text>
 					</View>
 					<View style={styles.points}>

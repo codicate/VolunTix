@@ -39,6 +39,8 @@ export const PastCard = ({
 		image: string;
 		title: string;
 		location: string;
+		date: string;
+		points: number;
 	};
 }) => (
 	<View
@@ -48,13 +50,20 @@ export const PastCard = ({
 		}}
 	>
 		{/* <Card containerStyle={styles.pastcard}> */}
-		<Image style={styles.image} source={{ uri: event.image }}></Image>
-		<View style={{ flexDirection: "column" }}>
-			<Text style={styles.text}>{event.title}</Text>
-			<Text style={styles.text}>{event.location}</Text>
-			<Text style={styles.date}>16 July</Text>
+		<View style={{ flexDirection: "row", alignItems: "center" }}>
+			<Image style={styles.image} source={{ uri: event.image }}></Image>
+			<View style={{ flexDirection: "column" }}>
+				<Text style={styles.text}>{event.title}</Text>
+				<Text style={styles.date}>{event.date}</Text>
+			</View>
 		</View>
-		<View style={{ flexDirection: "column", marginLeft: "7.5%" }}>
+		<View
+			style={{
+				flexDirection: "column",
+				marginLeft: "auto",
+				marginRight: "auto",
+			}}
+		>
 			<Text
 				style={{
 					fontSize: 20,
@@ -63,7 +72,7 @@ export const PastCard = ({
 					marginRight: "auto",
 				}}
 			>
-				90
+				{event.points}
 			</Text>
 			<Text style={{ fontSize: 20, marginLeft: "auto", marginRight: "auto" }}>
 				Points
