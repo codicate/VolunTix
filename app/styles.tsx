@@ -117,7 +117,7 @@ const styles = StyleSheet.create({
 	},
 	navigator: {
 		display: "flex",
-		paddingTop: "5%",
+		paddingTop: 10,
 	},
 	icon: {},
 	pastcard: {

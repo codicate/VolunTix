@@ -18,9 +18,10 @@ import { UserStore } from "#configs/userStore";
 
 function TabBarIcon(props: {
 	name: React.ComponentProps<typeof Icon>["name"];
-	color: string;
 }) {
-	return <Icon size={28} style={{ marginBottom: -3 }} {...props} />;
+	return (
+		<Icon size={22} style={{ marginBottom: -3 }} color="#333" {...props} />
+	);
 }
 
 const More = () => {
@@ -52,7 +53,8 @@ const More = () => {
 					display: "flex",
 					flexDirection: "row",
 					alignItems: "center",
-					paddingVertical: 10,
+					paddingTop: 20,
+					paddingBottom: 10,
 					paddingHorizontal: 20,
 					gap: 25,
 				}}
@@ -117,7 +119,8 @@ const More = () => {
 						},
 						tabBarActiveTintColor: "red",
 						tabBarIndicatorStyle: {
-							backgroundColor: "black",
+							backgroundColor: "#888",
+							height: 2,
 						},
 					}}
 				>
@@ -125,14 +128,14 @@ const More = () => {
 						name="Past"
 						component={Past}
 						options={{
-							tabBarIcon: () => <TabBarIcon name="calendar" color={"black"} />,
+							tabBarIcon: () => <TabBarIcon name="calendar" />,
 						}}
 					/>
 					<Tab.Screen
 						name="Tickets"
 						component={Tickets}
 						options={{
-							tabBarIcon: () => <TabBarIcon name="ticket" color={"black"} />,
+							tabBarIcon: () => <TabBarIcon name="ticket" />,
 						}}
 					/>
 				</Tab.Navigator>
