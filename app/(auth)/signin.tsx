@@ -103,6 +103,7 @@ export const styles = StyleSheet.create({
 	textLink: {
 		fontSize: 20,
 		color: "#FFFFFF",
+		paddingTop: "2%",
 	},
 	textInput: {
 		minWidth: 250,
